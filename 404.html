@@ -91,48 +91,80 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="/index.html" aria-label="Esvan Works home">
-          <img src="/assets/logo.jpeg"
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand-column">
+        <a class="footer-brand" href="/" aria-label="Esvan Works home">
+          <img
+            class="footer-logo"
+            src="/assets/logo.jpeg"
+            width="190"
+            height="70"
             alt="Esvan Works — Software Services Studio"
-            width="180" height="60" loading="lazy">
+            loading="lazy"
+            decoding="async"
+            onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+          >
+          <strong class="footer-fallback" hidden>
+            ESVAN <span>WORKS</span>
+          </strong>
         </a>
         <p>Websites and local SEO for businesses in Guntur, Andhra Pradesh.</p>
         <p>Available remotely across India.</p>
+        <a
+          class="button button-whatsapp footer-audit"
+          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20business."
+          target="_blank"
+          rel="noopener noreferrer"
+        >Free website audit</a>
       </div>
-      <div>
-        <h2 class="footer-heading">Explore</h2>
-        <ul class="footer-links">
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/work.html">Work</a></li>
-          <li><a href="/pricing.html">Pricing</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
+      <!-- Explore -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <nav class="footer-links" aria-label="Explore">
+          <a href="/">Home</a>
+          <a href="/services.html">Services</a>
+          <a href="/work.html">Work</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
       </div>
-      <div>
-        <h2 class="footer-heading">Websites by business type</h2>
-        <ul class="footer-links">
-          <li><a href="/website-for-clinics.html">Websites for clinics</a></li>
-          <li><a href="/website-for-real-estate.html">Websites for real estate</a></li>
-          <li><a href="/website-for-business.html">Websites for businesses</a></li>
-        </ul>
+      <!-- Solutions -->
+      <div class="footer-column">
+        <h3>Solutions</h3>
+        <nav class="footer-links" aria-label="Solutions">
+          <a href="/website-for-clinics-guntur.html">Website for clinics</a>
+          <a href="/website-for-real-estate-guntur.html">Website for real estate</a>
+          <a href="/website-for-small-business-guntur.html">Website for small business</a>
+        </nav>
       </div>
-      <div>
-        <h2 class="footer-heading">Contact</h2>
-        <ul class="footer-links">
-          <li><a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a></li>
-          <li><a href="https://wa.me/917995722627" target="_blank" rel="noopener noreferrer">WhatsApp Eswar</a></li>
-          <li>Guntur, Andhra Pradesh, India</li>
-        </ul>
+      <!-- Contact -->
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <div class="footer-links">
+          <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
+          <a
+            href="https://wa.me/917995722627"
+            target="_blank"
+            rel="noopener noreferrer"
+          >WhatsApp</a>
+          <a
+              href="https://www.linkedin.com/in/eswar-maguluri/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >LinkedIn</a>
+          <span class="footer-location">Guntur, Andhra Pradesh</span>
+        </div>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>© <span data-year>2026</span> Esvan Works. All rights reserved.</p>
-      <a href="/privacy.html">Privacy Policy</a>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
+      <a href="/privacy.html">Privacy policy</a>
     </div>
-  </footer>
+  </div>
+</footer>
 </body>
 </html>
