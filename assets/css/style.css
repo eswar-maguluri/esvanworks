@@ -1690,3 +1690,13 @@ li {
     line-height: 1.5;
   }
 }
+@media (max-width: 760px) {
+  .mobile-whatsapp,
+  .mobile-whatsapp-cta {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+}
