@@ -1254,3 +1254,6 @@ li {
     transition-duration: .01ms !important;
   }
 }
+#maintenance h2 {
+  text-wrap: balance;
+}
