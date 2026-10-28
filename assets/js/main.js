@@ -355,6 +355,9 @@ document.addEventListener("DOMContentLoaded", function () {
           item.setAttribute("aria-hidden", String(!active));
         });
       }
+      function showNextTestimonial() {
+        showTestimonial(current + 1);
+      }
       const previous = controls.querySelector("[data-testimonial-prev]");
       const next = controls.querySelector("[data-testimonial-next]");
       if (previous) {
@@ -364,9 +367,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (next) {
         next.addEventListener("click", function () {
-          showTestimonial(current + 1);
+          showNextTestimonial();
         });
       }
+      items.forEach(function (item) {
+        item.addEventListener("click", showNextTestimonial);
+        item.addEventListener("keydown", function (event) {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          showNextTestimonial();
+        });
+      });
       showTestimonial(current);
     });
   document
@@ -458,7 +469,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelectorAll("[data-result-line]")
     .forEach(function (element) {
       const text = element.textContent.trim();
-      if (!text || /^\[.*\]$/.test(text)) {
+      if (!text || /^\[.*]$/.test(text)) {
         element.hidden = true;
       }
     });

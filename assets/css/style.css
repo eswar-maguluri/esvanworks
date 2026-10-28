@@ -630,59 +630,6 @@ li {
 .final-cta .button-row {
   justify-content: center;
 }
-.site-footer {
-  padding: 4rem 0 1.5rem;
-  background: #15181f;
-  border-top: 1px solid var(--border);
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr 1fr;
-  gap: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-.footer-logo {
-  width: 190px;
-  height: 70px;
-  object-fit: contain;
-  object-position: left center;
-}
-.footer-fallback {
-  font: 800 1.3rem Archivo, sans-serif;
-  display: block;
-  color: var(--text);
-}
-.footer-fallback span {
-  color: var(--cyan);
-}
-.site-footer p {
-  color: var(--muted);
-  font-size: .95rem;
-}
-.site-footer h3 {
-  font-size: 1.05rem;
-  letter-spacing: 0;
-}
-.footer-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .5rem 1rem;
-}
-.footer-links a {
-  color: #c1c8d4;
-  text-decoration: none;
-  font-size: .95rem;
-}
-.footer-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 1.3rem;
-  color: var(--muted);
-  font-size: .9rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
 .mobile-whatsapp,
 .mobile-whatsapp-cta {
   display: none;
@@ -952,18 +899,6 @@ li {
 .testimonial cite {
   font-style: normal;
   font-weight: 700;
-}
-.testimonial-slider-controls {
-  display: flex;
-  gap: .6rem;
-  margin-top: 1rem;
-}
-.testimonial-slider-controls button {
-  background: var(--surface);
-  color: var(--text);
-  border: 1px solid var(--border);
-  padding: .6rem 1rem;
-  border-radius: 8px;
 }
 .range-wrap {
   display: grid;
@@ -1377,8 +1312,9 @@ li {
 }
 .site-footer a,
 .footer-bottom,
-p,
-li {
+.panel-row,
+.work-content p,
+.service-item p {
   overflow-wrap: anywhere;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1425,39 +1361,33 @@ li {
   height: auto;
   margin: 24px auto;
 }
-main > #acquire360,
-main > #sr-cleaning {
-  display: block !important;
-  width: 100% !important;
-  max-width: none !important;
-  float: none !important;
-  clear: both !important;
-  grid-column: 1 / -1 !important;
+.work-project-section {
+  display: block;
+  width: 100%;
+  max-width: none;
+  float: none;
+  clear: both;
+  grid-column: 1 / -1;
 }
-main > #acquire360 > .container,
-main > #sr-cleaning > .container {
-  display: block !important;
+.work-project-section > .container {
+  display: block;
   width: min(100% - 3rem, 1040px);
   max-width: 1040px;
   margin-inline: auto;
 }
-main > #acquire360 .work-card,
-main > #sr-cleaning .work-card {
-  display: flex !important;
-  flex-direction: column !important;
+.work-project-section .work-card {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 900px;
   margin-inline: auto;
 }
-main > #acquire360 .work-frame,
-main > #sr-cleaning .work-frame,
-main > #acquire360 .work-content,
-main > #sr-cleaning .work-content {
+.work-project-section .work-frame,
+.work-project-section .work-content {
   width: 100%;
   min-width: 0;
 }
-main > #acquire360 .work-frame img,
-main > #sr-cleaning .work-frame img {
+.work-project-section .work-frame img {
   display: block;
   width: 100%;
   height: auto;
@@ -1466,8 +1396,7 @@ main > #sr-cleaning .work-frame img {
   object-fit: contain;
 }
 @media (max-width: 600px) {
-  main > #acquire360 > .container,
-  main > #sr-cleaning > .container {
+  .work-project-section > .container {
     width: calc(100% - 2rem);
   }
 }
