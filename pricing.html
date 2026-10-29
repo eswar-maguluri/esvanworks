@@ -20,16 +20,13 @@
     (function () {
       var isLocal = location.hostname === "localhost" ||
                     location.hostname === "127.0.0.1";
-
       if (!isLocal) return;
-
       document.addEventListener("DOMContentLoaded", function () {
         var routes = [
           "/services", "/work", "/pricing", "/about", "/contact",
           "/privacy", "/website-for-clinics",
           "/website-for-real-estate", "/website-for-business"
         ];
-
         document.querySelectorAll('a[href]').forEach(function (link) {
           var href = link.getAttribute("href");
 
@@ -37,14 +34,10 @@
               /^(https?:|mailto:|tel:|javascript:|\/\/)/i.test(href)) {
             return;
           }
-
           try {
             var url = new URL(href, location.href);
-
             if (url.origin !== location.origin) return;
-
             var path = url.pathname.replace(/\/+$/, "") || "/";
-
             if (routes.indexOf(path) !== -1) {
               url.pathname = path + ".html";
               link.setAttribute(
@@ -60,7 +53,6 @@
     })();
   </script>
   <script src="/assets/js/main.js" defer></script>
-
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Esvan Works">
   <meta property="og:title" content="Website Pricing in Guntur | Esvan Works">
@@ -153,10 +145,8 @@
   }
   </script>
 </head>
-
 <body class="pricing-page">
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Esvan Works home">
@@ -597,11 +587,11 @@
           <h3>Explore</h3>
           <nav class="footer-links" aria-label="Explore">
             <a href="/">Home</a>
-            <a href="/services.html">Services</a>
-            <a href="/work.html">Work</a>
-            <a href="/pricing.html">Pricing</a>
-            <a href="/about.html">About</a>
-            <a href="/contact.html">Contact</a>
+            <a href="/services">Services</a>
+            <a href="/work">Work</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
           </nav>
         </div>
 
@@ -609,8 +599,8 @@
           <h3>Solutions</h3>
           <nav class="footer-links" aria-label="Solutions">
             <a href="/website-for-clinics">Website for clinics</a>
-            <a href="/website-for-real-estate.html">Website for real estate</a>
-            <a href="/website-for-business.html">Website for business</a>
+            <a href="/website-for-real-estate">Website for real estate</a>
+            <a href="/website-for-business">Website for business</a>
           </nav>
         </div>
 
