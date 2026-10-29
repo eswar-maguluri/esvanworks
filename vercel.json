@@ -1,40 +1,17 @@
+
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/index.html",
-      "destination": "/",
+      "source": "/website-for-business.html",
+      "destination": "/website-for-business",
       "permanent": true
     },
     {
-      "source": "/services.html",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/pricing.html",
-      "destination": "/pricing",
-      "permanent": true
-    },
-    {
-      "source": "/work.html",
-      "destination": "/work",
-      "permanent": true
-    },
-    {
-      "source": "/about.html",
-      "destination": "/about",
-      "permanent": true
-    },
-    {
-      "source": "/contact.html",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/privacy.html",
-      "destination": "/privacy",
+      "source": "/website-for-clinics.html",
+      "destination": "/website-for-clinics",
       "permanent": true
     },
     {
@@ -43,8 +20,38 @@
       "permanent": true
     },
     {
-      "source": "/website-for-business.html",
-      "destination": "/website-for-business",
+      "source": "/pricing.html",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/work.html",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms",
       "permanent": true
     }
   ],
@@ -57,12 +64,12 @@
           "value": "nosniff"
         },
         {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
           "key": "X-Frame-Options",
           "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
         },
         {
           "key": "Permissions-Policy",

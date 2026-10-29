@@ -1,63 +1,37 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://esvanworks.com/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://www.esvanworks.com/</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/services.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.esvanworks.com/services</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/work.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.esvanworks.com/work</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/pricing.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.esvanworks.com/pricing</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/about.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.esvanworks.com/about</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/contact.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.esvanworks.com/contact</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/privacy.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://www.esvanworks.com/website-for-business</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/website-for-clinics</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.esvanworks.com/website-for-clinics</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/website-for-real-estate.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.esvanworks.com/website-for-real-estate</loc>
   </url>
   <url>
-    <loc>https://esvanworks.com/website-for-business.html</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.esvanworks.com/privacy</loc>
+  </url>
+  <url>
+    <loc>https://www.esvanworks.com/terms</loc>
   </url>
 </urlset>

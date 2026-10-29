@@ -1,70 +1,35 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Website Pricing in Guntur | Esvan Works</title>
-  <meta name="description" content="Compare website packages from ₹6,999, website plus local SEO from ₹12,999, and monthly website care from ₹1,999.">
+  <meta name="description" content="Compare Esvan Works website packages: Starter Website ₹5,999, Website + Local SEO ₹11,999, Local SEO setup ₹4,999, and Monthly Care ₹1,499/month.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1A1D24">
-  <link rel="canonical" href="https://esvanworks.com/pricing">
+  <link rel="canonical" href="https://www.esvanworks.com/pricing">
   <link rel="icon" href="/assets/logo-icon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/assets/logo-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Noto+Sans+Telugu:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
-
-  <script>
-    /* Enable clean internal URLs on the live site and .html URLs locally. */
-    (function () {
-      var isLocal = location.hostname === "localhost" ||
-                    location.hostname === "127.0.0.1";
-      if (!isLocal) return;
-      document.addEventListener("DOMContentLoaded", function () {
-        var routes = [
-          "/services", "/work", "/pricing", "/about", "/contact",
-          "/privacy", "/website-for-clinics",
-          "/website-for-real-estate", "/website-for-business"
-        ];
-        document.querySelectorAll('a[href]').forEach(function (link) {
-          var href = link.getAttribute("href");
-
-          if (!href || href.charAt(0) === "#" ||
-              /^(https?:|mailto:|tel:|javascript:|\/\/)/i.test(href)) {
-            return;
-          }
-          try {
-            var url = new URL(href, location.href);
-            if (url.origin !== location.origin) return;
-            var path = url.pathname.replace(/\/+$/, "") || "/";
-            if (routes.indexOf(path) !== -1) {
-              url.pathname = path + ".html";
-              link.setAttribute(
-                "href",
-                url.pathname + url.search + url.hash
-              );
-            }
-          } catch (error) {
-            /* Leave invalid links unchanged. */
-          }
-        });
-      });
-    })();
-  </script>
   <script src="/assets/js/main.js" defer></script>
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Esvan Works">
   <meta property="og:title" content="Website Pricing in Guntur | Esvan Works">
   <meta property="og:description" content="Compare website development, local SEO and monthly website care packages, with clear scope and pricing.">
-  <meta property="og:url" content="https://esvanworks.com/pricing">
-  <meta property="og:image" content="https://esvanworks.com/assets/og-image.png">
+  <meta property="og:url" content="https://www.esvanworks.com/pricing">
+  <meta property="og:image" content="https://www.esvanworks.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Website Pricing in Guntur | Esvan Works">
   <meta name="twitter:description" content="Compare website development, local SEO and monthly website care packages, with clear scope and pricing.">
-  <meta name="twitter:image" content="https://esvanworks.com/assets/og-image.png">
+  <meta name="twitter:image" content="https://www.esvanworks.com/assets/og-image.png">
 
   <script type="application/ld+json">
   {
@@ -75,13 +40,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://esvanworks.com/"
+        "item": "https://www.esvanworks.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Pricing",
-        "item": "https://esvanworks.com/pricing"
+        "item": "https://www.esvanworks.com/pricing"
       }
     ]
   }
@@ -91,7 +56,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://esvanworks.com/pricing#faq",
+    "@id": "https://www.esvanworks.com/pricing#faq",
     "mainEntity": [
       {
         "@type": "Question",
@@ -106,7 +71,7 @@
         "name": "Will I own my website and domain?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You own your website and domain. Wherever possible, domain registration and third-party accounts should be set up in your name so you retain control."
+          "text": "Website ownership and any transfer arrangements will be confirmed in writing. Wherever possible, domain registration and third-party accounts should be set up in the client's name so they retain control."
         }
       },
       {
@@ -135,18 +100,44 @@
       },
       {
         "@type": "Question",
+        "name": "Are GST and third-party costs included?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GST treatment and any applicable taxes must be confirmed before payment. Domain registration, hosting, renewals and other third-party fees are separate unless specifically included in the written scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who pays for hosting, and can you migrate my site?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The hosting provider, account ownership, who pays recurring charges and any migration work will be agreed in writing before the project starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Monthly Care cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Monthly Care covers agreed routine updates, backup checks where supported, uptime monitoring, basic maintenance and security checks, and a monthly report. Specific limits and the handling of content changes will be agreed in writing."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Can you add booking or order features?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Booking and ordering features can be discussed. The cost depends on what the feature needs to do, so the scope and price will be confirmed separately before starting."
+          "text": "Booking, ordering, additional pages, Telugu versions and property listing features can be discussed. The scope and price will be confirmed separately before work begins."
         }
       }
     ]
   }
   </script>
 </head>
+
 <body class="pricing-page">
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/" aria-label="Esvan Works home">
@@ -154,7 +145,7 @@
           src="/assets/logo-icon.png"
           width="40"
           height="40"
-          alt="Esvan Works EW monogram"
+          alt=""
           onerror="this.hidden=true;this.nextElementSibling.hidden=false"
         >
         <span class="brand-fallback" hidden>
@@ -184,12 +175,19 @@
           href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20discuss%20website%20pricing."
           target="_blank"
           rel="noopener noreferrer"
+          data-track="whatsapp"
         >Ask about pricing</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
+    <nav class="breadcrumbs container" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Pricing</span>
+    </nav>
+
     <section class="section hero-section">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -207,6 +205,7 @@
               href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20please%20help%20me%20choose%20a%20website%20package."
               target="_blank"
               rel="noopener noreferrer"
+              data-track="whatsapp"
             >Help me choose</a>
             <a class="button button-secondary" href="#packages">Compare packages</a>
           </div>
@@ -235,13 +234,13 @@
           <p class="eyebrow">Choose your starting point</p>
           <h2>Three clear ways to get started.</h2>
           <p>
-            Prices below are in Indian rupees. Extra features are quoted
-            before work begins.
+            Prices are in Indian rupees. Extra features and third-party costs
+            are discussed before work begins.
           </p>
         </div>
 
         <div class="package-grid">
-          <article class="package">
+          <article class="package" id="starter">
             <p class="package-label">For a new website</p>
             <h3>Starter Website</h3>
             <p class="package-description">
@@ -258,7 +257,7 @@
               <li>Up to 5 pages</li>
               <li>Mobile-friendly layout</li>
               <li>WhatsApp contact button</li>
-              <li>Contact form that opens WhatsApp</li>
+              <li>Contact form that prepares a WhatsApp enquiry</li>
               <li>Basic on-page SEO setup</li>
               <li>SSL setup support</li>
             </ul>
@@ -269,12 +268,13 @@
                 href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27m%20interested%20in%20the%20Starter%20Website%20package%20at%20%E2%82%B95%2C999."
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="whatsapp"
               >Ask about Starter</a>
             </div>
           </article>
 
-          <article class="package recommended">
-            <span class="price-highlight package-badge">Most popular</span>
+          <article class="package recommended" id="seo">
+            <span class="price-highlight package-badge">Recommended</span>
             <p class="package-label">Website plus local search setup</p>
             <h3>Website + Local SEO</h3>
             <p class="package-description">
@@ -296,21 +296,21 @@
               <li>Google Analytics setup</li>
             </ul>
 
-            <div class="package-actions">
-              <a
-                class="button button-primary button-full"
-                href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27m%20interested%20in%20the%20Website%20%2B%20Local%20SEO%20package%20at%20%E2%82%B911%2C999."
-                target="_blank"
-                rel="noopener noreferrer"
-              >Ask about Website + SEO</a>
-              <p class="small muted package-note">
-                SEO setup does not guarantee rankings or a specific number
-                of enquiries.
-              </p>
-            </div>
+            <a
+              class="button button-primary button-full"
+              href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27m%20interested%20in%20the%20Website%20%2B%20Local%20SEO%20package%20at%20%E2%82%B911%2C999."
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track="whatsapp"
+            >Ask about Website + SEO</a>
+
+            <p class="small-note">
+              This package adds speed optimization and Google Analytics setup
+              to the Starter package, along with local SEO work.
+            </p>
           </article>
 
-          <article class="package">
+          <article class="package" id="care">
             <p class="package-label">Ongoing website support</p>
             <h3>Monthly Care</h3>
             <p class="package-description">
@@ -323,23 +323,25 @@
             </p>
 
             <ul class="feature-list">
-              <li>Routine website updates</li>
+              <li>Agreed routine website updates</li>
               <li>Backup checks where supported by the hosting setup</li>
               <li>Uptime monitoring</li>
+              <li>Basic maintenance and security checks</li>
               <li>Monthly maintenance report</li>
             </ul>
 
-            <div class="package-actions">
-              <a
-                class="button button-secondary button-full"
-                href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20ask%20about%20Monthly%20Care%20at%20%E2%82%B91%2C499%20per%20month."
-                target="_blank"
-                rel="noopener noreferrer"
-              >Ask about Monthly Care</a>
-              <p class="small muted package-note">
-                Included tasks and any limits are confirmed in writing.
-              </p>
-            </div>
+            <a
+              class="button button-secondary button-full"
+              href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20ask%20about%20Monthly%20Care%20at%20%E2%82%B91%2C499%20per%20month."
+              target="_blank"
+              rel="noopener noreferrer"
+              data-track="whatsapp"
+            >Ask about Monthly Care</a>
+
+            <p class="small-note">
+              Included tasks, update limits, and the hosting setup will be
+              confirmed in writing before the service starts.
+            </p>
           </article>
         </div>
 
@@ -348,8 +350,9 @@
             <p class="eyebrow">Already have a website?</p>
             <h3 id="local-seo-addon-title">Local SEO setup only</h3>
             <p>
-              Google Business Profile, on-page SEO fixes, Search Console setup
-              and a written summary of changes.
+              Google Business Profile setup, on-page SEO work, Search Console
+              setup and a written summary of changes. The exact scope depends
+              on your current website and profile.
             </p>
           </div>
 
@@ -358,26 +361,25 @@
               <strong>₹4,999</strong>
               <span class="price-note">one-time</span>
             </p>
-            <span class="pricing-addon-label">Introductory price</span>
 
             <a
               class="button button-secondary button-full"
-              href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20ask%20about%20the%20Local%20SEO%20setup."
-              data-whatsapp
-              data-message="Hi Eswar, I'd like to ask about the Local SEO setup."
+              href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20ask%20about%20Local%20SEO%20setup%20only%20at%20%E2%82%B94%2C999."
               target="_blank"
               rel="noopener noreferrer"
+              data-track="whatsapp"
             >Ask about Local SEO</a>
 
-            <p class="small muted package-note">
-              Local SEO does not guarantee rankings or a specific number of enquiries.
+            <p class="small-note">
+              Local SEO does not guarantee rankings or a specific number
+              of enquiries.
             </p>
           </div>
         </aside>
 
         <p class="pricing-disclaimer">
-          Final price depends on the number of pages and required features.
-          I’ll confirm the full scope and price in writing before starting.
+          Final deliverables and price are confirmed in writing before work
+          starts. Search rankings, traffic and enquiries are not guaranteed.
         </p>
       </div>
     </section>
@@ -437,6 +439,7 @@
             href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20please%20help%20me%20choose%20a%20website%20package."
             target="_blank"
             rel="noopener noreferrer"
+            data-track="whatsapp"
           >Discuss my requirements</a>
         </div>
       </div>
@@ -448,8 +451,8 @@
           <p class="eyebrow">Before we start</p>
           <h2>What the prices don’t include.</h2>
           <p>
-            To avoid surprises, these items are not included in the listed
-            packages unless we agree on them separately.
+            These items are not included in the listed packages unless we
+            agree on them separately.
           </p>
         </div>
 
@@ -460,11 +463,13 @@
             <li>Logo design or branding</li>
             <li>Extra pages or custom features beyond the agreed scope</li>
             <li>Third-party subscription fees or domain renewal charges</li>
+            <li>Domain registration, hosting, migration or renewal fees unless agreed in writing</li>
           </ul>
 
           <p class="small-note">
-            Need English and Telugu content or a language switch? Ask for a
-            separate quote. The extra price will be confirmed in writing.
+            Need an extra page, Telugu version, booking feature or property
+            listing system? Ask for a separate quote. Extra prices are
+            confirmed in writing before work begins.
           </p>
         </div>
       </div>
@@ -490,9 +495,10 @@
           <details>
             <summary>Will I own my website and domain?</summary>
             <p>
-              You own your website and domain. Wherever possible, domain
-              registration and third-party accounts should be set up in your
-              name so you retain control.
+              Website ownership and any transfer arrangements will be
+              confirmed in writing. Wherever possible, domain registration
+              and third-party accounts should be set up in your name so you
+              retain control.
             </p>
           </details>
 
@@ -524,11 +530,40 @@
           </details>
 
           <details>
+            <summary>Are GST and third-party costs included?</summary>
+            <p>
+              GST treatment and any applicable taxes must be confirmed before
+              payment. Domain registration, hosting, renewals and other
+              third-party fees are separate unless specifically included in
+              the written scope.
+            </p>
+          </details>
+
+          <details>
+            <summary>Who pays for hosting, and can you migrate my site?</summary>
+            <p>
+              The hosting provider, account ownership, who pays recurring
+              charges and any migration work will be agreed in writing before
+              the project starts.
+            </p>
+          </details>
+
+          <details>
+            <summary>What does Monthly Care cover?</summary>
+            <p>
+              Monthly Care covers agreed routine updates, backup checks where
+              supported, uptime monitoring, basic maintenance and security
+              checks, and a monthly report. Specific limits and the handling
+              of content changes will be agreed in writing.
+            </p>
+          </details>
+
+          <details>
             <summary>Can you add booking or order features?</summary>
             <p>
-              Booking and ordering features can be discussed. The cost depends
-              on what the feature needs to do, so the scope and price will be
-              confirmed separately before starting.
+              Booking, ordering, additional pages, Telugu versions and
+              property listing features can be discussed. The scope and price
+              will be confirmed separately before work begins.
             </p>
           </details>
         </div>
@@ -546,43 +581,46 @@
 
         <a
           class="button button-primary"
-          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20discuss%20a%20website%20for%20my%20business%20in%20Guntur."
+          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20discuss%20a%20website%20for%20my%20business."
           target="_blank"
           rel="noopener noreferrer"
+          data-track="whatsapp"
         >Discuss your website on WhatsApp</a>
+        <a class="button button-secondary" href="/contact">Contact Eswar</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand-column">
-          <a class="footer-brand" href="/" aria-label="Esvan Works home">
-            <img
-              class="footer-logo"
-              src="/assets/logo.jpeg"
-              width="190"
-              height="70"
-              alt="Esvan Works — Software Services Studio"
-              loading="lazy"
-              decoding="async"
-              onerror="this.hidden=true;this.nextElementSibling.hidden=false"
-            >
-            <strong class="footer-fallback" hidden>
-              ESVAN <span>WORKS</span>
-            </strong>
-          </a>
-          <p>Websites and local SEO for businesses in Guntur, Andhra Pradesh.</p>
-          <p>Available remotely across India.</p>
-          <a
-            class="button button-whatsapp footer-audit"
-            href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20business."
-            target="_blank"
-            rel="noopener noreferrer"
-          >Free website audit</a>
-        </div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-column">
+        <a class="footer-brand" href="/" aria-label="Esvan Works home">
+          <img
+            class="footer-logo"
+            src="/assets/logo.jpeg"
+            width="190"
+            height="70"
+            alt="Esvan Works"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        <p>Websites &amp; Local SEO.</p>
+        <p>
+          Serving businesses in Guntur, Andhra Pradesh, and remotely across India.
+        </p>
+        <a
+          class="button button-whatsapp footer-audit"
+          data-whatsapp
+          data-message="Hi Eswar, I'd like a free website audit for my business."
+          href="https://wa.me/917995722627"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Free website audit</a>
+      </div>
 
+      <div class="footer-navigation">
         <div class="footer-column">
           <h3>Explore</h3>
           <nav class="footer-links" aria-label="Explore">
@@ -603,39 +641,35 @@
             <a href="/website-for-business">Website for business</a>
           </nav>
         </div>
-
-        <div class="footer-column">
-          <h3>Contact</h3>
-          <div class="footer-links">
-            <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
-            <a
-              href="https://wa.me/917995722627"
-              target="_blank"
-              rel="noopener noreferrer"
-            >WhatsApp</a>
-            <a
-              href="https://www.linkedin.com/in/eswar-maguluri/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >LinkedIn</a>
-            <span class="footer-location">Guntur, Andhra Pradesh</span>
-          </div>
-        </div>
       </div>
 
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
-        <a href="/privacy.html">Privacy policy</a>
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+        <nav class="footer-links" aria-label="Contact and social links">
+          <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
+          <a href="tel:+917995722627">+91 79957 22627</a>
+          <a href="https://wa.me/917995722627" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://www.linkedin.com/in/eswar-maguluri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+        <p class="footer-location">Guntur, Andhra Pradesh, India</p>
       </div>
     </div>
-  </footer>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms of service</a>
+    </div>
+  </div>
+</footer>
 
   <a
     class="mobile-whatsapp"
-    href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20business."
+    href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20discuss%20website%20pricing."
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Request a free website audit on WhatsApp"
-  >Free website audit on WhatsApp</a>
+    aria-label="Discuss website pricing on WhatsApp"
+    data-track="whatsapp"
+  >Discuss pricing on WhatsApp</a>
 </body>
 </html>

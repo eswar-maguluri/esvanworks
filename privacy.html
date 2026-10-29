@@ -1,38 +1,38 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Privacy Policy | Esvan Works</title>
-  <meta name="description" content="Read the Esvan Works privacy policy covering website usage, WhatsApp enquiries, contact forms, and third-party services.">
+  <meta name="description" content="Read the Esvan Works privacy policy covering website visits, enquiries, WhatsApp links, analytics and third-party services.">
+  <meta name="theme-color" content="#1A1D24">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.esvanworks.com/privacy">
 
-  <link rel="canonical" href="https://esvanworks.com/privacy">
+  <link rel="icon" href="/assets/logo-icon.png" type="image/png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/main.js" defer></script>
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Esvan Works">
   <meta property="og:title" content="Privacy Policy | Esvan Works">
   <meta property="og:description" content="How Esvan Works handles information submitted through its website and contact links.">
-  <meta property="og:url" content="https://esvanworks.com/privacy">
-  <meta property="og:image" content="https://esvanworks.com/assets/og-image.png">
+  <meta property="og:url" content="https://www.esvanworks.com/privacy">
+  <meta property="og:image" content="https://www.esvanworks.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy Policy | Esvan Works">
   <meta name="twitter:description" content="How Esvan Works handles information submitted through its website and contact links.">
-  <meta name="twitter:image" content="https://esvanworks.com/assets/og-image.png">
-
-  <link rel="icon" href="/assets/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#171B22">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;700&display=swap">
-
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <script src="/assets/js/main.js" defer></script>
+  <meta name="twitter:image" content="https://www.esvanworks.com/assets/og-image.png">
 
   <script type="application/ld+json">
   {
@@ -43,13 +43,13 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://esvanworks.com/"
+        "item": "https://www.esvanworks.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Privacy Policy",
-        "item": "https://esvanworks.com/privacy"
+        "item": "https://www.esvanworks.com/privacy"
       }
     ]
   }
@@ -60,9 +60,19 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <nav class="header-inner" aria-label="Main navigation">
+    <div class="header-inner">
       <a class="brand" href="/" aria-label="Esvan Works home">
-        <img src="/assets/logo-icon.png" alt="" width="40" height="40">
+        <img
+          src="/assets/logo-icon.png"
+          width="40"
+          height="40"
+          alt=""
+          onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+        >
+        <span class="brand-fallback" hidden>
+          <span>ESVAN</span>
+          <span>WORKS</span>
+        </span>
         <span>Esvan Works</span>
       </a>
 
@@ -70,15 +80,11 @@
         class="menu-toggle"
         type="button"
         aria-expanded="false"
-        aria-controls="primary-navigation"
-        aria-label="Open navigation menu">
-        Menu
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        aria-controls="primary-nav"
+        aria-label="Open navigation menu"
+      >Menu</button>
 
-      <div class="site-nav" id="primary-navigation">
+      <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/services">Services</a>
         <a href="/work">Work</a>
@@ -86,29 +92,40 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
         <a
-          class="button button-primary nav-cta"
-          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20business."
+          class="button button-primary nav-audit"
+          data-whatsapp
+          data-message="Hi Eswar, I'd like a free website audit for my business."
+          href="https://wa.me/917995722627"
           target="_blank"
-          rel="noopener noreferrer">Free website audit</a>
-      </div>
-    </nav>
+          rel="noopener noreferrer"
+          data-track="whatsapp"
+        >Free website audit</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Privacy policy</span>
+    </nav>
+
     <section class="section hero-section">
       <div class="container">
         <p class="eyebrow">Your information</p>
         <h1>Privacy Policy</h1>
         <p class="hero-description">
-          This policy explains how Esvan Works handles information when you
-          visit this website or contact me about a project.
+          This policy explains how Esvan Works handles information when
+          you visit this website or contact me about a project.
         </p>
-        <p class="small-note">Last updated: 28 October 2026</p>
+        <p class="small-note">Last updated: 29 October 2026</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container legal-content content-stack">
+
         <section>
           <h2>1. Who operates this website?</h2>
           <p>
@@ -136,182 +153,204 @@
           </ul>
           <p>
             Please do not send passwords, payment card details, identity
-            documents, or other sensitive information through the website
-            enquiry form.
+            documents or other sensitive information through a general
+            website enquiry.
           </p>
         </section>
 
         <section>
           <h2>3. How the contact form works</h2>
           <p>
-            The contact form on this website prepares a message using the
-            details you enter and opens WhatsApp so you can review and send
-            it. The form does not itself submit your details to an Esvan
-            Works website server.
+            The current contact form prepares an enquiry message using
+            the details you enter and opens WhatsApp so you can review
+            and send it. The form does not itself submit your details to
+            an Esvan Works website server.
           </p>
           <p>
-            Your information is sent only if you choose to send the message
-            through WhatsApp. WhatsApp and its provider may process your
-            information under their own terms and privacy policy.
+            Your message is sent through WhatsApp only if you choose to
+            send it. WhatsApp and its provider may process your information
+            under their own terms and privacy policy.
+          </p>
+          <p>
+            If a server-based contact form is added in the future, this
+            policy must be reviewed and updated to describe the actual
+            provider, data processing and retention arrangements before
+            that form is enabled.
           </p>
         </section>
 
         <section>
-          <h2>4. How enquiry information is used</h2>
-          <p>
-            If you contact me, I may use the information you provide to:
-          </p>
+          <h2>4. Why information may be used</h2>
+          <p>Information you provide may be used to:</p>
           <ul class="feature-list">
             <li>Respond to your enquiry</li>
-            <li>Discuss your project requirements and provide a quote</li>
-            <li>Coordinate website development or maintenance work</li>
-            <li>Follow up on a request you have made</li>
+            <li>Discuss project requirements, scope and pricing</li>
+            <li>Communicate about an agreed project or service</li>
+            <li>Keep relevant business correspondence and records</li>
+            <li>Protect the website and handle misuse or spam</li>
           </ul>
           <p>
-            I do not use information submitted through this website to
-            create user accounts, and this website does not provide a
-            customer login system.
+            Information should be limited to what is reasonably needed
+            for the relevant enquiry or business purpose.
           </p>
         </section>
 
         <section>
-          <h2>5. Cookies, analytics, and technical information</h2>
+          <h2>5. Website analytics and event tracking</h2>
           <p>
-            This website is built as a static website. Its own HTML, CSS,
-            and JavaScript do not require a user account or database to
-            operate.
+            Website analytics or event tracking may be used to understand
+            general site usage and interactions, such as clicks on contact
+            links. These tools should only be described as active after
+            the relevant analytics service has been configured.
           </p>
           <p>
-            Hosting providers, including Cloudflare where applicable, may
-            process technical information such as IP addresses, browser
-            details, security events, and request logs as part of delivering
-            and protecting the website.
+            If Google Analytics or another analytics tool is enabled, the
+            policy should identify the service in use and explain the
+            applicable data collection, consent choices and retention
+            settings. Third-party providers may process data according
+            to their own policies.
           </p>
           <p>
-            If analytics or other third-party services are enabled on the
-            website, those services may collect information according to
-            their own policies. Check the deployed website configuration
-            for the services currently in use.
+            Do not enter personal details into analytics event labels or
+            send the contents of private enquiries as analytics data.
           </p>
         </section>
 
         <section>
-          <h2>6. Third-party websites</h2>
+          <h2>6. Cookies and similar technologies</h2>
           <p>
-            This website may link to third-party services, including
-            WhatsApp, client websites, and email applications. When you
-            follow an external link, that service's own privacy terms apply
-            to your activity there.
+            This website may load third-party resources, such as web fonts,
+            and may use analytics technologies if configured. Those
+            providers may process technical information as part of
+            delivering their services.
+          </p>
+          <p>
+            The exact cookies and similar technologies depend on the
+            services actually enabled on the website. This policy should
+            be updated if additional tracking, advertising or embedded
+            third-party services are introduced.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Third-party services and external links</h2>
+          <p>
+            The website contains links to services operated by other
+            organisations, including WhatsApp and LinkedIn. When you open
+            an external service, its own terms, privacy policy and data
+            practices apply.
           </p>
           <p>
             Esvan Works does not control the privacy practices of those
-            external services.
+            external services. Review their policies before sharing
+            information through them.
           </p>
         </section>
 
         <section>
-          <h2>7. Sharing information</h2>
+          <h2>8. Sharing and disclosure</h2>
           <p>
-            I do not sell personal information submitted through this
-            website. Information may be processed by service providers
-            involved in website hosting, communications, or the delivery
-            of services you request.
+            Information you provide is not intended for public display.
+            It may be handled by service providers needed to operate
+            communication or website services, where those providers
+            are actually used.
           </p>
           <p>
-            Information may also be disclosed when required by applicable
-            law or when reasonably necessary to protect rights, security,
-            or the website from abuse.
-          </p>
-        </section>
-
-        <section>
-          <h2>8. Data retention and security</h2>
-          <p>
-            Enquiry messages may remain in the communication service you use
-            and in my correspondence for as long as needed to respond to
-            your request, manage a project, maintain business records, or
-            meet legal obligations.
+            Information may also need to be disclosed where required by
+            applicable law or where reasonably necessary to protect
+            rights, safety or the security of the website.
           </p>
           <p>
-            I take reasonable steps to handle project communications
-            responsibly. However, no website or electronic communication
-            method can be guaranteed completely secure.
+            Do not interpret this section as a claim that a particular
+            form processor, CRM, hosting add-on or analytics provider
+            is configured. The actual providers should be documented
+            when selected.
           </p>
         </section>
 
         <section>
-          <h2>9. Your choices and requests</h2>
+          <h2>9. Data retention and security</h2>
           <p>
-            You can choose whether to submit an enquiry and what information
-            to include. You can also contact me to ask about personal
-            information associated with your enquiry or request correction
-            or deletion where applicable law permits.
+            Business correspondence may be retained for as long as
+            reasonably needed to respond to enquiries, manage projects,
+            maintain records or meet applicable obligations.
           </p>
           <p>
-            Some information may need to be retained where required by law
-            or for legitimate business recordkeeping.
+            Retention periods depend on the communication channel and
+            any third-party services involved. No specific deletion
+            period is promised by this policy.
           </p>
-        </section>
-
-        <section>
-          <h2>10. Children's privacy</h2>
           <p>
-            This website is intended for people seeking business or
-            professional services. It is not designed to collect personal
-            information from children.
+            Reasonable care should be taken when handling information,
+            but no internet transmission or storage method can be
+            guaranteed to be completely secure.
           </p>
         </section>
 
         <section>
-          <h2>11. Changes to this policy</h2>
+          <h2>10. Your choices and privacy requests</h2>
           <p>
-            This policy may be updated when website features, services, or
-            applicable requirements change. The latest revision date will
-            be shown at the top of this page.
+            You can choose whether to submit an enquiry or send a
+            WhatsApp message. You may also contact me to ask about
+            information you have provided or to request correction
+            or deletion, subject to applicable legal and recordkeeping
+            requirements.
+          </p>
+          <p>
+            Send privacy-related requests to
+            <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>.
+            Please do not include passwords, identity documents or
+            unnecessary sensitive information in the request.
           </p>
         </section>
 
         <section>
-          <h2>12. Contact</h2>
-          <p>If you have a question about this policy, contact:</p>
+          <h2>11. Children's information</h2>
           <p>
-            <strong>Esvan Works — Eswar Maguluri</strong><br>
-            Guntur, Andhra Pradesh, India
+            This website is intended for people seeking business
+            website services, not for children to submit personal
+            information. Please contact me if you believe a child
+            has provided personal information through this website.
+          </p>
+        </section>
+
+        <section>
+          <h2>12. Changes to this policy</h2>
+          <p>
+            This policy may be updated when website features, contact
+            methods or third-party services change. The latest revision
+            date will be shown at the top of this page.
+          </p>
+        </section>
+
+        <section>
+          <h2>13. Contact</h2>
+          <p>
+            For questions about this policy or information you have
+            submitted, contact:
           </p>
           <p>
+            <strong>Esvan Works</strong><br>
+            Guntur, Andhra Pradesh, India<br>
             Email:
-            <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
-          </p>
-          <p>
-            WhatsApp:
-            <a
-              href="https://wa.me/917995722627"
-              target="_blank"
-              rel="noopener noreferrer">Contact Eswar</a>
+            <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a><br>
+            Phone:
+            <a href="tel:+917995722627">+91 79957 22627</a>
           </p>
         </section>
-      </div>
-    </section>
 
-    <section class="section final-cta">
-      <div class="container">
-        <p class="eyebrow">Need clarification?</p>
-        <h2>Contact Esvan Works.</h2>
-        <p>
-          For questions about this policy or a website project, get in touch directly.
+        <p class="small muted">
+          This page is a general privacy notice, not legal advice.
+          Review it against the services and data practices actually
+          used by the live website before publication.
         </p>
-        <a
-          class="button button-primary"
-          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%20have%20a%20question%20about%20the%20Esvan%20Works%20privacy%20policy."
-          target="_blank"
-          rel="noopener noreferrer">Message on WhatsApp</a>
       </div>
     </section>
   </main>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <!-- Brand -->
       <div class="footer-brand-column">
         <a class="footer-brand" href="/" aria-label="Esvan Works home">
           <img
@@ -319,85 +358,66 @@
             src="/assets/logo.jpeg"
             width="190"
             height="70"
-            alt="Esvan Works — Software Services Studio"
+            alt="Esvan Works"
             loading="lazy"
             decoding="async"
-            onerror="this.hidden=true;this.nextElementSibling.hidden=false"
           >
-          <strong class="footer-fallback" hidden>
-            ESVAN <span>WORKS</span>
-          </strong>
         </a>
-        <p>Websites and local SEO for businesses in Guntur, Andhra Pradesh.</p>
-        <p>Available remotely across India.</p>
+        <p>Websites &amp; Local SEO.</p>
+        <p>
+          Serving businesses in Guntur, Andhra Pradesh, and remotely across India.
+        </p>
         <a
           class="button button-whatsapp footer-audit"
-          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20business."
+          data-whatsapp
+          data-message="Hi Eswar, I'd like a free website audit for my business."
+          href="https://wa.me/917995722627"
           target="_blank"
           rel="noopener noreferrer"
         >Free website audit</a>
       </div>
-      <!-- Explore -->
-      <div class="footer-column">
-        <h3>Explore</h3>
-        <nav class="footer-links" aria-label="Explore">
-          <a href="/">Home</a>
-          <a href="/services.html">Services</a>
-          <a href="/work.html">Work</a>
-          <a href="/pricing.html">Pricing</a>
-          <a href="/about.html">About</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-      <!-- Solutions -->
-      <div class="footer-column">
-        <h3>Solutions</h3>
-        <nav class="footer-links" aria-label="Solutions">
-          <a href="/website-for-clinics">Website for clinics</a>
-          <a href="/website-for-real-estate.html">Website for real estate</a>
-          <a href="/website-for-business.html">Website for business</a>
-        </nav>
-      </div>
-      <!-- Contact -->
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <div class="footer-links">
-          <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
-          <a
-            href="https://wa.me/917995722627"
-            target="_blank"
-            rel="noopener noreferrer"
-          >WhatsApp</a>
-          <a
-              href="https://www.linkedin.com/in/eswar-maguluri/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >LinkedIn</a>
-          <span class="footer-location">Guntur, Andhra Pradesh</span>
+
+      <div class="footer-navigation">
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <nav class="footer-links" aria-label="Explore">
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/work">Work</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h3>Solutions</h3>
+          <nav class="footer-links" aria-label="Solutions">
+            <a href="/website-for-clinics">Website for clinics</a>
+            <a href="/website-for-real-estate">Website for real estate</a>
+            <a href="/website-for-business">Website for business</a>
+          </nav>
         </div>
       </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+        <nav class="footer-links" aria-label="Contact and social links">
+          <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
+          <a href="tel:+917995722627">+91 79957 22627</a>
+          <a href="https://wa.me/917995722627" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://www.linkedin.com/in/eswar-maguluri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+        <p class="footer-location">Guntur, Andhra Pradesh, India</p>
+      </div>
     </div>
+
     <div class="footer-bottom">
       <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
-      <a href="/privacy.html">Privacy policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms of service</a>
     </div>
   </div>
 </footer>
-  <div class="mobile-bottom-bar" aria-label="Quick contact options">
-    <a
-      class="mobile-whatsapp-cta"
-      href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20business."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Request a free website audit on WhatsApp">
-      WhatsApp
-    </a>
-    <a
-      class="mobile-call-cta"
-      href="mailto:contact@esvanworks.com"
-      aria-label="Email Esvan Works">
-      Email
-    </a>
-  </div>
 </body>
 </html>

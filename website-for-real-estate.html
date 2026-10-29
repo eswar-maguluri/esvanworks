@@ -1,55 +1,88 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Real Estate Website Design in Guntur | Esvan Works</title>
-  <meta name="description" content="Websites for real estate agents, property consultants, and builders in Guntur. Showcase property listings, project details, locations, and WhatsApp enquiries with Esvan Works.">
+  <meta name="description" content="Real estate websites for agents, property consultants and builders. Present property details, project information and enquiry options with Esvan Works.">
+  <meta name="theme-color" content="#1A1D24">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.esvanworks.com/website-for-real-estate">
 
-  <link rel="canonical" href="https://esvanworks.com/website-for-real-estate">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Real Estate Website Design in Guntur">
-  <meta property="og:description" content="Present properties clearly and give buyers a direct way to enquire by phone or WhatsApp.">
-  <meta property="og:url" content="https://esvanworks.com/website-for-real-estate">
-  <meta property="og:image" content="https://esvanworks.com/assets/og-image.png">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Real Estate Website Design in Guntur">
-  <meta name="twitter:description" content="Present properties clearly and give buyers a direct way to enquire by phone or WhatsApp.">
-  <meta name="twitter:image" content="https://esvanworks.com/assets/og-image.png">
-
-  <link rel="icon" href="/assets/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/assets/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="icon" href="/assets/logo-icon.png" type="image/png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#171B22">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
 
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/main.js" defer></script>
 
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Esvan Works">
+  <meta property="og:title" content="Real Estate Website Design in Guntur | Esvan Works">
+  <meta property="og:description" content="Present property information clearly and give interested buyers a direct way to enquire.">
+  <meta property="og:url" content="https://www.esvanworks.com/website-for-real-estate">
+  <meta property="og:image" content="https://www.esvanworks.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Real Estate Website Design in Guntur | Esvan Works">
+  <meta name="twitter:description" content="Websites for property agents, consultants and builders with clear enquiry options.">
+  <meta name="twitter:image" content="https://www.esvanworks.com/assets/og-image.png">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://esvanworks.com/"
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.esvanworks.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Websites for Real Estate",
+            "item": "https://www.esvanworks.com/website-for-real-estate"
+          }
+        ]
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Websites for Real Estate",
-        "item": "https://esvanworks.com/website-for-real-estate"
+        "@type": "Service",
+        "name": "Real Estate Website Development",
+        "serviceType": "Website development for real estate businesses",
+        "url": "https://www.esvanworks.com/website-for-real-estate",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Esvan Works",
+          "url": "https://www.esvanworks.com/",
+          "email": "contact@esvanworks.com",
+          "telephone": "+917995722627",
+          "founder": {
+            "@type": "Person",
+            "name": "Eswar Maguluri",
+            "url": "https://www.esvanworks.com/about"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Guntur"
+            },
+            {
+              "@type": "Country",
+              "name": "India"
+            }
+          ]
+        }
       }
     ]
   }
@@ -60,9 +93,19 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <nav class="header-inner" aria-label="Main navigation">
+    <div class="header-inner">
       <a class="brand" href="/" aria-label="Esvan Works home">
-        <img src="/assets/logo-icon.png" alt="" width="40" height="40">
+        <img
+          src="/assets/logo-icon.png"
+          width="40"
+          height="40"
+          alt=""
+          onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+        >
+        <span class="brand-fallback" hidden>
+          <span>ESVAN</span>
+          <span>WORKS</span>
+        </span>
         <span>Esvan Works</span>
       </a>
 
@@ -70,15 +113,11 @@
         class="menu-toggle"
         type="button"
         aria-expanded="false"
-        aria-controls="primary-navigation"
-        aria-label="Open navigation menu">
-        Menu
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        aria-controls="primary-nav"
+        aria-label="Open navigation menu"
+      >Menu</button>
 
-      <div class="site-nav" id="primary-navigation">
+      <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/services">Services</a>
         <a href="/work">Work</a>
@@ -86,269 +125,321 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
         <a
-          class="button button-primary nav-cta"
-          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20to%20discuss%20a%20real%20estate%20website%20in%20Guntur."
+          class="button button-primary nav-audit"
+          data-whatsapp
+          data-message="Hi Eswar, I'd like to discuss a real estate website for my business."
+          href="https://wa.me/917995722627"
           target="_blank"
-          rel="noopener noreferrer">Discuss a property website</a>
-      </div>
-    </nav>
+          rel="noopener noreferrer"
+          data-track="whatsapp"
+        >Discuss a property website</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="section hero-section">
+    <nav class="container breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <a href="/services">Services</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Websites for real estate</span>
+    </nav>
+
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Real estate websites · Guntur</p>
+          <span class="eyebrow">Real estate websites · Guntur</span>
           <h1>Give buyers a clear way to explore your properties and enquire.</h1>
-          <p class="hero-description">
-            Whether you sell plots, houses, apartments, or new developments,
-            your website can present property details in one place and help
+          <p>
+            Whether you handle plots, houses, apartments or development
+            projects, a website can organise property information and help
             interested buyers contact you directly.
           </p>
 
-          <div class="hero-actions">
+          <div class="button-row">
             <a
-              class="button button-primary"
-              href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20real%20estate%20business."
+              class="button button-whatsapp"
+              data-whatsapp
+              data-message="Hi Eswar, I'd like to discuss a real estate website for my business."
+              href="https://wa.me/917995722627"
               target="_blank"
-              rel="noopener noreferrer">Request a free website audit</a>
-            <a class="button button-secondary" href="/pricing">View pricing</a>
+              rel="noopener noreferrer"
+              data-track="whatsapp"
+            >Discuss your website</a>
+            <a class="button button-secondary" href="/pricing#starter">
+              View website pricing
+            </a>
           </div>
 
-          <p class="small-note">
-            Based in Guntur, Andhra Pradesh. Available remotely across India.
+          <p class="hero-note muted">
+            Listing details, features, content and price are agreed before
+            development begins.
           </p>
         </div>
 
-        <div class="hero-art" aria-hidden="true">
-          <div class="hero-shape"></div>
+        <div class="hero-art">
+          <div class="hero-shape" aria-hidden="true"></div>
           <div class="hero-panel">
-            <p class="panel-label">Property information</p>
-            <h2>Show the details buyers need.</h2>
+            <span class="panel-index">PROPERTY WEBSITE</span>
+            <h2>Property information in one place.</h2>
             <div class="panel-rule"></div>
-            <p>Property photos and descriptions</p>
-            <p>Location and key features</p>
-            <p>Direct phone and WhatsApp enquiries</p>
+            <div class="panel-row"><span>Property details</span><span>01</span></div>
+            <div class="panel-row"><span>Location and photos</span><span>02</span></div>
+            <div class="panel-row"><span>Project information</span><span>03</span></div>
+            <div class="panel-row"><span>Call and enquiry links</span><span>04</span></div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="section section--surface">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Built around your listings</span>
+          <h2>Present the details buyers need to review.</h2>
+          <p>
+            The final website structure depends on your business model,
+            number of listings and the features agreed for the project.
+          </p>
+        </div>
+
+        <div class="service-list">
+          <article class="service-item">
+            <h3>Property listings</h3>
+            <p>
+              Organise approved listing details such as property type,
+              location, size, price where supplied, photographs and
+              enquiry options.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <h3>Project or development pages</h3>
+            <p>
+              Present project information, available property types,
+              location details and documents supplied by the owner or
+              authorised representative.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <h3>Buyer enquiries</h3>
+            <p>
+              Provide agreed call, email or WhatsApp actions so visitors
+              can ask about a listing. Advanced search, user accounts or
+              automated listing management require separate scoping.
+            </p>
+          </article>
+
+          <article class="service-item">
+            <h3>Responsive browsing</h3>
+            <p>
+              Organise property details and images for mobile and desktop
+              visitors. Image selection and optimisation depend on the
+              supplied property assets.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
-      <div class="container two-column-section">
+      <div class="container split">
         <div>
-          <p class="eyebrow">The challenge</p>
-          <h2>Property details scattered across messages can make enquiries harder to manage.</h2>
+          <span class="eyebrow">Sample listing layout</span>
+          <h2>A demonstration of how a listing could look.</h2>
+          <p>
+            The card is a fictional design example. It does not represent
+            a real property, current availability, market price or
+            verified investment opportunity.
+          </p>
+        </div>
+
+        <div class="demo-card" aria-label="Fictional sample property listing">
+          <div class="demo-card-header">
+            <span class="panel-index">SAMPLE · DEMO ONLY</span>
+            <span class="demo-label">Fictional example</span>
+          </div>
+
+          <div class="demo-property-image" aria-hidden="true">
+            <span>Sample property image area</span>
+          </div>
+
+          <h3>Sample Property Listing</h3>
+          <p class="muted">Example location · Details to be verified</p>
+
+          <div class="panel-rule"></div>
+
+          <div class="panel-row">
+            <span>Property type</span>
+            <strong>Sample only</strong>
+          </div>
+          <div class="panel-row">
+            <span>Area and dimensions</span>
+            <strong>Not specified</strong>
+          </div>
+          <div class="panel-row">
+            <span>Price</span>
+            <strong>Not specified</strong>
+          </div>
+
+          <p class="small muted">
+            Replace this sample with verified information and images
+            authorised for publication by the property owner or agent.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">RERA and property information</span>
+          <h2>Use accurate, owner-approved property details.</h2>
+          <p>
+            Property descriptions, approvals and registration details
+            should be supplied and checked by the responsible owner,
+            agent or developer before publication.
+          </p>
         </div>
 
         <div class="content-stack">
-          <p>
-            Buyers often want to compare locations, property types, prices,
-            sizes, and available features before they make contact. If your
-            information is spread across social posts and forwarded messages,
-            people may struggle to find the details they need.
+          <article class="problem-item">
+            <h3>RERA registration details</h3>
+            <p>
+              Where applicable, a listing or project page can display the
+              relevant RERA registration information supplied by the
+              responsible party. The number and related details must be
+              verified before they are published.
+            </p>
+          </article>
+
+          <article class="problem-item">
+            <h3>Prices, availability and approvals</h3>
+            <p>
+              The property owner or authorised representative is
+              responsible for confirming prices, availability, dimensions,
+              approvals, ownership and other listing claims.
+            </p>
+          </article>
+
+          <article class="problem-item">
+            <h3>Photographs and documents</h3>
+            <p>
+              Use images and documents that you are authorised to publish.
+              Do not present a sample listing as an available property.
+            </p>
+          </article>
+
+          <p class="small muted">
+            Website development does not replace legal, title, regulatory
+            or property due diligence.
           </p>
-          <p>
-            A dedicated website gives you a central place to present your
-            listings and explain how buyers can arrange a visit or request
-            more information.
-          </p>
-          <p>
-            It can also help people understand who you are, which areas you
-            serve, and how to reach you without searching through old messages.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Features for property businesses</p>
-          <h2>Put your listings and enquiry options in one place.</h2>
-        </div>
-
-        <div class="steps">
-          <article class="step">
-            <span class="step-number">01</span>
-            <h3>Property listing pages</h3>
-            <p>
-              Present available plots, houses, apartments, or commercial
-              properties with photos and relevant details.
-            </p>
-          </article>
-
-          <article class="step">
-            <span class="step-number">02</span>
-            <h3>Clear property information</h3>
-            <p>
-              Display verified details such as location, size, price, features,
-              and availability where applicable.
-            </p>
-          </article>
-
-          <article class="step">
-            <span class="step-number">03</span>
-            <h3>Enquiry forms and WhatsApp</h3>
-            <p>
-              Let interested buyers ask about a property or contact your team
-              directly from their phones.
-            </p>
-          </article>
-
-          <article class="step">
-            <span class="step-number">04</span>
-            <h3>Area and project pages</h3>
-            <p>
-              Organize information by locality, development, or property type
-              so visitors can find relevant listings.
-            </p>
-          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container two-column-section">
+      <div class="container split">
         <div>
-          <p class="eyebrow">Built for mobile visitors</p>
-          <h2>Make it easier to view a property and ask the next question.</h2>
+          <span class="eyebrow">Local search foundations</span>
+          <h2>Help visitors understand your business and service area.</h2>
+          <p>
+            A website can support your online presence, but it cannot
+            guarantee search rankings, leads or property sales.
+          </p>
         </div>
 
         <div class="content-stack">
-          <p>
-            Buyers may discover your business while travelling, comparing
-            properties, or searching on a phone. Your website should make
-            important details readable on small screens and keep contact
-            options easy to find.
-          </p>
-          <p>
-            Depending on your requirements, the website can include property
-            categories, individual listing pages, map links, enquiry forms,
-            click-to-call buttons, and WhatsApp contact options.
-          </p>
-          <p>
-            If you serve specific areas around Guntur, we can discuss useful
-            area pages and the information each page should contain.
-            Location-specific content should be accurate and useful rather
-            than repeated just to target search terms.
-          </p>
+          <article class="problem-item">
+            <h3>Business contact information</h3>
+            <p>
+              Clear contact details and service-area information based on
+              the details you provide.
+            </p>
+          </article>
+
+          <article class="problem-item">
+            <h3>On-page SEO</h3>
+            <p>
+              Relevant page titles, descriptions, headings and internal
+              links within the agreed project scope.
+            </p>
+          </article>
+
+          <article class="problem-item">
+            <h3>Google Business Profile</h3>
+            <p>
+              Setup or improvement can be discussed where eligible and
+              where you can provide the required account access.
+              Verification and ranking decisions remain outside my control.
+            </p>
+          </article>
+
+          <a class="button button-secondary" href="/pricing#seo">
+            View local SEO pricing
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section--surface">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">How the project works</p>
-          <h2>Agree on the scope before development begins.</h2>
+          <span class="eyebrow">Related pages</span>
+          <h2>Explore services, work and pricing.</h2>
+          <p>
+            Review the available scope and selected projects before
+            deciding which features your property website needs.
+          </p>
         </div>
 
-        <div class="steps">
-          <article class="step">
-            <span class="step-number">01</span>
-            <h3>Discuss your business</h3>
-            <p>
-              Tell me whether you are an agent, builder, property consultant,
-              or developer and what you need to showcase.
-            </p>
-          </article>
-
-          <article class="step">
-            <span class="step-number">02</span>
-            <h3>Plan the listings</h3>
-            <p>
-              Agree on the pages, property information, images, enquiry
-              features, and any area-specific content.
-            </p>
-          </article>
-
-          <article class="step">
-            <span class="step-number">03</span>
-            <h3>Review the website</h3>
-            <p>
-              Check the layout, listing information, and contact options
-              before the website goes live.
-            </p>
-          </article>
-
-          <article class="step">
-            <span class="step-number">04</span>
-            <h3>Launch and maintain</h3>
-            <p>
-              Launch after approval. Discuss ongoing maintenance if you need
-              help keeping listings and pages updated.
-            </p>
-          </article>
-        </div>
-
-        <p class="small-note">
-          A typical website takes 7–14 days after the required content and
-          materials are provided. Larger listing systems may need a different
-          timeline and quote.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Frequently asked questions</p>
-          <h2>Real estate website questions.</h2>
-        </div>
-
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>Can I show multiple properties on my website?</summary>
-            <p>
-              Yes. The website can include listing pages or property categories.
-              The number of listings, how they are updated, and whether you need
-              a searchable listing system will affect the project scope and price.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Can buyers enquire about a property on WhatsApp?</summary>
-            <p>
-              Yes. WhatsApp buttons can open a message to your business, and the
-              website can include click-to-call links and enquiry forms. Any
-              advanced lead management features must be agreed separately.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Can the website target different areas around Guntur?</summary>
-            <p>
-              Yes. Relevant area pages can explain the properties or services
-              you actually offer in each location. These pages can support your
-              local search setup, but specific rankings or enquiry volumes
-              cannot be guaranteed.
-            </p>
-          </details>
+        <div class="button-row">
+          <a class="button button-secondary" href="/services">
+            Explore services
+          </a>
+          <a class="button button-secondary" href="/work">
+            View selected work
+          </a>
+          <a class="button button-primary" href="/pricing#starter">
+            Compare website pricing
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section final-cta">
+    <section class="final-cta">
       <div class="container">
-        <p class="eyebrow">For agents, consultants, and builders</p>
-        <h2>Let’s plan your property website.</h2>
+        <span class="eyebrow">Discuss your project</span>
+        <h2>Planning a website for your real estate business?</h2>
         <p>
-          Tell me what types of properties you handle, which areas you serve,
-          and how buyers should contact you.
+          Tell me whether you are an agent, property consultant or builder,
+          and whether you need simple listing pages or more advanced
+          property features.
         </p>
-        <a
-          class="button button-primary"
-          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27m%20looking%20for%20a%20real%20estate%20website%20in%20Guntur.%20I%27d%20like%20to%20discuss%20the%20pages%20and%20pricing."
-          target="_blank"
-          rel="noopener noreferrer">Discuss your property website on WhatsApp</a>
+
+        <div class="button-row">
+          <a
+            class="button button-whatsapp"
+            data-whatsapp
+            data-message="Hi Eswar, I'd like to discuss a real estate website for my business."
+            href="https://wa.me/917995722627"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track="whatsapp"
+          >Discuss on WhatsApp</a>
+          <a class="button button-secondary" href="/contact">
+            Contact page
+          </a>
+        </div>
       </div>
     </section>
   </main>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <!-- Brand -->
       <div class="footer-brand-column">
         <a class="footer-brand" href="/" aria-label="Esvan Works home">
           <img
@@ -356,85 +447,66 @@
             src="/assets/logo.jpeg"
             width="190"
             height="70"
-            alt="Esvan Works — Software Services Studio"
+            alt="Esvan Works"
             loading="lazy"
             decoding="async"
-            onerror="this.hidden=true;this.nextElementSibling.hidden=false"
           >
-          <strong class="footer-fallback" hidden>
-            ESVAN <span>WORKS</span>
-          </strong>
         </a>
-        <p>Websites and local SEO for businesses in Guntur, Andhra Pradesh.</p>
-        <p>Available remotely across India.</p>
+        <p>Websites &amp; Local SEO.</p>
+        <p>
+          Serving businesses in Guntur, Andhra Pradesh, and remotely across India.
+        </p>
         <a
           class="button button-whatsapp footer-audit"
-          href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20business."
+          data-whatsapp
+          data-message="Hi Eswar, I'd like a free website audit for my business."
+          href="https://wa.me/917995722627"
           target="_blank"
           rel="noopener noreferrer"
         >Free website audit</a>
       </div>
-      <!-- Explore -->
-      <div class="footer-column">
-        <h3>Explore</h3>
-        <nav class="footer-links" aria-label="Explore">
-          <a href="/">Home</a>
-          <a href="/services.html">Services</a>
-          <a href="/work.html">Work</a>
-          <a href="/pricing.html">Pricing</a>
-          <a href="/about.html">About</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-      <!-- Solutions -->
-      <div class="footer-column">
-        <h3>Solutions</h3>
-        <nav class="footer-links" aria-label="Solutions">
-          <a href="/website-for-clinics">Website for clinics</a>
-          <a href="/website-for-real-estate.html">Website for real estate</a>
-          <a href="/website-for-business.html">Website for business</a>
-        </nav>
-      </div>
-      <!-- Contact -->
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <div class="footer-links">
-          <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
-          <a
-            href="https://wa.me/917995722627"
-            target="_blank"
-            rel="noopener noreferrer"
-          >WhatsApp</a>
-          <a
-              href="https://www.linkedin.com/in/eswar-maguluri/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >LinkedIn</a>
-          <span class="footer-location">Guntur, Andhra Pradesh</span>
+
+      <div class="footer-navigation">
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <nav class="footer-links" aria-label="Explore">
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/work">Work</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h3>Solutions</h3>
+          <nav class="footer-links" aria-label="Solutions">
+            <a href="/website-for-clinics">Website for clinics</a>
+            <a href="/website-for-real-estate">Website for real estate</a>
+            <a href="/website-for-business">Website for business</a>
+          </nav>
         </div>
       </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+        <nav class="footer-links" aria-label="Contact and social links">
+          <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
+          <a href="tel:+917995722627">+91 79957 22627</a>
+          <a href="https://wa.me/917995722627" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://www.linkedin.com/in/eswar-maguluri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+        <p class="footer-location">Guntur, Andhra Pradesh, India</p>
+      </div>
     </div>
+
     <div class="footer-bottom">
       <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
-      <a href="/privacy.html">Privacy policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms of service</a>
     </div>
   </div>
 </footer>
-  <div class="mobile-bottom-bar" aria-label="Quick contact options">
-    <a
-      class="mobile-whatsapp-cta"
-      href="https://wa.me/917995722627?text=Hi%20Eswar%2C%20I%27d%20like%20a%20free%20website%20audit%20for%20my%20business."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Request a free website audit on WhatsApp">
-      WhatsApp
-    </a>
-    <a
-      class="mobile-call-cta"
-      href="mailto:contact@esvanworks.com"
-      aria-label="Email Esvan Works">
-      Email
-    </a>
-  </div>
 </body>
 </html>
