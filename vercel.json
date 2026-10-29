@@ -38,11 +38,6 @@
       "permanent": true
     },
     {
-      "source": "/website-for-clinics",
-      "destination": "/website-for-clinics",
-      "permanent": true
-    },
-    {
       "source": "/website-for-real-estate.html",
       "destination": "/website-for-real-estate",
       "permanent": true
