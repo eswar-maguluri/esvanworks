@@ -1,4 +1,3 @@
-
 :root {
   color-scheme: dark;
   --bg: #1A1D24;
@@ -2247,12 +2246,10 @@ li {
 /* =========================================
    Remaining project layout helpers
    ========================================= */
-
 @media (max-width: 760px) {
   .mobile-footer-column {
     min-width: 0;
   }
-
   .mobile-footer-column a {
     overflow-wrap: anywhere;
   }
@@ -3229,5 +3226,218 @@ summary {
 
   .site-footer .footer-bottom > a {
     margin: 0;
+  }
+}
+
+/* =========================================
+   ESVAN WORKS — global polish
+   Retains the existing dark / cyan brand.
+   ========================================= */
+
+:root {
+  --content: 1180px;
+  --radius-card: 14px;
+  --shadow-card: 0 18px 50px rgba(0, 0, 0, .18);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  min-width: 320px;
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: var(--content);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  transition: color .18s ease, opacity .18s ease;
+}
+
+button,
+.button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button {
+  border-radius: 8px;
+  clip-path: none;
+}
+
+.button:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.service-item,
+.work-card,
+.package,
+.testimonial,
+.health-check,
+.finder,
+.pricing-addon {
+  border-radius: var(--radius-card);
+}
+
+.service-item,
+.work-card,
+.package {
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.service-item:hover,
+.work-card:hover,
+.package:hover {
+  border-color: rgba(0, 212, 255, .55);
+  box-shadow: var(--shadow-card);
+}
+
+.work-frame img {
+  background: #171c25;
+}
+
+.site-nav > a:not(.button):hover,
+.footer-links a:hover,
+.text-link:hover,
+.service-item a:hover {
+  color: var(--cyan);
+}
+
+.field input,
+.field select,
+.field textarea,
+.health-question select {
+  max-width: 100%;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #8994a5;
+  opacity: 1;
+}
+
+.button-row {
+  align-items: center;
+}
+
+.button:active,
+button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 84px;
+  }
+
+  h1 {
+    max-width: 14ch;
+    line-height: 1.08;
+  }
+
+  .hero-copy p {
+    font-size: 1.08rem;
+  }
+
+  .section {
+    padding-block: clamp(3rem, 10vw, 4.5rem);
+  }
+
+  .section-heading {
+    margin-bottom: 1.6rem;
+  }
+
+  .button-row {
+    align-items: stretch;
+  }
+
+  .button-row .button {
+    min-height: 50px;
+  }
+
+  .health-question {
+    flex-wrap: wrap;
+  }
+
+  .health-question label {
+    min-width: 0;
+  }
+
+  .health-question select {
+    flex: 0 0 100px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: calc(100% - 1.25rem);
+  }
+
+  .site-header {
+    width: calc(100% - 10px);
+  }
+
+  .header-inner {
+    gap: .5rem;
+  }
+
+  .brand {
+    white-space: normal;
+  }
+
+  .hero {
+    padding-top: 2.75rem;
+  }
+
+  .hero-panel {
+    width: 92%;
+  }
+
+  .stat {
+    padding-inline: .75rem;
+  }
+
+  .service-item,
+  .work-content,
+  .testimonial,
+  .package {
+    padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
   }
 }
