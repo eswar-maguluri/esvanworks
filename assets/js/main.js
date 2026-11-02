@@ -1,16 +1,25 @@
 "use strict";
 
+/* =========================================
+   Esvan Works — Main JavaScript
+   ========================================= */
+
 const WHATSAPP_NUMBER = "917995722627";
+const CONTACT_EMAIL = "eswarmaguluri02@gmail.com";
 
 const DEFAULT_AUDIT =
   "Hi Eswar, I found Esvan Works. I'd like a free website audit for my business.";
 
 const PACKAGE_PRICES = {
-  starter: "₹5,999 one-time",
-  websiteSeo: "₹11,999 one-time",
-  care: "₹1,499 per month",
-  localSeo: "₹4,999 one-time"
+  starter: "₹6,999 one-time",
+  websiteSeo: "₹12,999 one-time",
+  care: "₹1,999 per month",
+  localSeo: "₹5,999 one-time"
 };
+
+/* =========================================
+   Shared WhatsApp helpers
+   ========================================= */
 
 function whatsappUrl(message = DEFAULT_AUDIT) {
   return (
@@ -28,6 +37,10 @@ function setWhatsAppLink(link, message = DEFAULT_AUDIT) {
   link.target = "_blank";
   link.rel = "noopener noreferrer";
 }
+
+/* =========================================
+   Main page initialisation
+   ========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
   const isLocalPreview =
@@ -97,6 +110,31 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("[data-whatsapp]").forEach(function (link) {
     setWhatsAppLink(link, link.dataset.message || DEFAULT_AUDIT);
   });
+
+  /* -----------------------------------------
+     Language button
+     ----------------------------------------- */
+
+  const languageToggle = document.querySelector(
+    "[data-language-toggle]"
+  );
+
+  if (languageToggle) {
+    /*
+     * A complete Telugu translation has not yet
+     * been added to the page. Do not pretend that
+     * changing the button translates the content.
+     */
+    languageToggle.textContent = "తెలుగు soon";
+    languageToggle.disabled = true;
+    languageToggle.setAttribute("aria-pressed", "false");
+    languageToggle.setAttribute(
+      "aria-label",
+      "Telugu translation is not available yet"
+    );
+    languageToggle.title =
+      "The Telugu version of this website is being prepared.";
+  }
 
   /* -----------------------------------------
      Mobile navigation
@@ -385,11 +423,11 @@ document.addEventListener("DOMContentLoaded", function () {
       let explanation;
 
       if (website === "yes" && maps === "yes") {
-        packageName = "Local SEO";
+        packageName = "Local SEO setup";
         packagePrice = PACKAGE_PRICES.localSeo;
         explanation =
           "You already have a website and business listing. " +
-          "Local SEO may help improve your local search presence.";
+          "The Local SEO setup may help improve your local search foundations.";
       } else if (website === "no" && maps === "yes") {
         packageName = "Starter Website";
         packagePrice = PACKAGE_PRICES.starter;
@@ -400,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function () {
         packageName = "Website + Local SEO";
         packagePrice = PACKAGE_PRICES.websiteSeo;
         explanation =
-          "This bundle combines a website with local SEO setup " +
+          "This package combines a website with local SEO setup " +
           "to build your online presence.";
       } else {
         packageName = "Website review";
@@ -436,6 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
           [
             "Hi Eswar, please recommend a package for my business.",
             "Recommended option: " + packageName,
+            "Indicative price: " + packagePrice,
             "Website already exists: " + website,
             "Google Business Profile exists: " + maps,
             "Need ongoing care: " + care
@@ -452,4 +491,127 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updatePackageFinder();
   }
+
+  /* -----------------------------------------
+     Email enquiry form
+     ----------------------------------------- */
+
+  const enquiryForm = document.querySelector("[data-enquiry-form]");
+
+  if (enquiryForm) {
+    const status = enquiryForm.querySelector("[data-form-status]");
+    const submitButton = enquiryForm.querySelector(
+      'button[type="submit"]'
+    );
+
+    enquiryForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      /*
+       * Honeypot anti-spam check.
+       * Real visitors should leave this field empty.
+       */
+      const honeypot = enquiryForm.querySelector(
+        'input[name="website"]'
+      );
+
+      if (honeypot && honeypot.value.trim() !== "") {
+        if (status) {
+          status.textContent = "Unable to process this enquiry.";
+        }
+
+        return;
+      }
+
+      /*
+       * The form has novalidate in HTML, so call
+       * reportValidity() explicitly.
+       */
+      if (!enquiryForm.reportValidity()) {
+        return;
+      }
+
+      const name = enquiryForm.elements.name.value.trim();
+      const phone = enquiryForm.elements.phone.value.trim();
+      const businessType =
+        enquiryForm.elements.businessType.value.trim();
+      const message = enquiryForm.elements.message.value.trim();
+
+      if (name.length < 2) {
+        if (status) {
+          status.textContent =
+            "Please enter your name using at least 2 characters.";
+        }
+
+        enquiryForm.elements.name.focus();
+        return;
+      }
+
+      if (message.length < 10) {
+        if (status) {
+          status.textContent =
+            "Please provide a little more detail about your requirements.";
+        }
+
+        enquiryForm.elements.message.focus();
+        return;
+      }
+
+      const subject = "Website enquiry from " + name;
+
+      const body = [
+        "Hello Eswar,",
+        "",
+        "I would like to enquire about Esvan Works services.",
+        "",
+        "Name: " + name,
+        "Phone / WhatsApp: " + phone,
+        "Business type: " + businessType,
+        "",
+        "Requirements:",
+        message,
+        "",
+        "Sent from: " + window.location.href
+      ].join("\n");
+
+      const mailtoUrl =
+        "mailto:" +
+        CONTACT_EMAIL +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+
+      if (status) {
+        status.textContent =
+          "Opening your email app. Please review the prepared message and send it from your email account.";
+      }
+
+      if (submitButton) {
+        submitButton.textContent = "Open email app";
+      }
+
+      /*
+       * This opens the visitor's email application.
+       * It does not send the form to a server.
+       */
+      window.location.href = mailtoUrl;
+    });
+  }
+
+  /* -----------------------------------------
+     External links safety
+     ----------------------------------------- */
+  document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+    const relValues = new Set(
+      (link.getAttribute("rel") || "")
+        .split(/\s+/)
+        .filter(Boolean)
+    );
+
+    relValues.add("noopener");
+    relValues.add("noreferrer");
+
+    link.setAttribute("rel", Array.from(relValues).join(" "));
   });
+});
