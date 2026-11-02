@@ -99,7 +99,14 @@
   }
   </script>
 
-  <!-- Analytics is intentionally not loaded until an owner-approved [ANALYTICS_ID] is configured. -->
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NCD4841TB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3NCD4841TB');
+</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
