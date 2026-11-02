@@ -17,6 +17,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Noto+Sans+Telugu:wght@400;700&amp;display=swap">
 
+  <style>
+    /* Monthly Care report card: keep labels and statuses readable. */
+    .monthly-report-panel .monthly-report-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(132px, 0.72fr);
+      align-items: start;
+      gap: 12px;
+    }
+
+    .monthly-report-panel .monthly-report-row > span:first-child {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .monthly-report-panel .monthly-report-row > span:last-child {
+      min-width: 0;
+      text-align: right;
+      overflow-wrap: anywhere;
+      color: var(--accent, #70e1e8);
+      font-weight: 700;
+    }
+
+    @media (max-width: 560px) {
+      .monthly-report-panel .monthly-report-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 4px;
+      }
+
+      .monthly-report-panel .monthly-report-row > span:last-child {
+        text-align: left;
+      }
+    }
+  </style>
+
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/main.js" defer></script>
 
@@ -100,6 +134,47 @@
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is included in a business website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Page count, content, design, contact features and technical setup depend on the package and written project scope. The agreed deliverables are confirmed before work begins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help with Google Business Profile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Profile setup or improvement can be discussed where the business is eligible and you can provide the required account access. Verification and Google’s decisions remain outside the developer’s control."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you build a Telugu website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "English, Telugu or bilingual page requirements can be scoped. Translation, proofreading and the number of pages should be agreed before work starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I choose the right service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with the pages and customer actions your business needs. Compare the packages on the pricing page or contact Eswar to discuss the scope."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -113,12 +188,8 @@
           width="40"
           height="40"
           alt=""
-          onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+          decoding="async"
         >
-        <span class="brand-fallback" hidden>
-          <span>ESVAN</span>
-          <span>WORKS</span>
-        </span>
         <span>Esvan Works</span>
       </a>
 
@@ -159,12 +230,10 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Services · Guntur and across India</span>
-          <h1>Useful websites. Clear costs. Direct contact.</h1>
+          <span class="eyebrow">Website design &amp; local SEO · Guntur, Andhra Pradesh</span>
+          <h1>Websites that help Guntur businesses turn visits into enquiries.</h1>
           <p>
-            I build websites and set up local search basics for businesses
-            that want customers to find useful information and contact
-            them easily.
+            Fast, mobile-first websites with local SEO foundations, built directly by Eswar for clinics, real estate and service businesses.
           </p>
 
           <div class="button-row">
@@ -175,14 +244,14 @@
               href="https://wa.me/917995722627"
               target="_blank"
               rel="noopener noreferrer"
-            >Discuss your project</a>
+            >Get a free website audit</a>
             <a class="button button-secondary" href="/pricing">
               Compare prices
             </a>
           </div>
 
           <p class="hero-note muted">
-            Project scope, price and timing are confirmed before work starts.
+            Based in Guntur, Andhra Pradesh · Remote projects across India.
           </p>
         </div>
 
@@ -209,11 +278,18 @@
       </div>
     </section>
 
+    <section class="container trust-strip" aria-label="How Esvan Works operates">
+      <span>Direct contact with the builder</span>
+      <span>Scope and price in writing</span>
+      <span>30-day post-launch defect fixes</span>
+      <span>7–14 day typical build</span>
+    </section>
+
     <section class="section section--surface" id="website">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">01 / Build</span>
-          <h2>A website that answers the first questions.</h2>
+          <h2>Give customers the information they need to choose your business.</h2>
           <p>
             Help visitors understand your business, review your services
             and choose a clear way to contact you.
@@ -266,15 +342,13 @@
       <div class="container split">
         <div>
           <span class="eyebrow">02 / Local visibility</span>
-          <h2>Make it easier for nearby customers to find your business.</h2>
+          <h2>Help nearby customers discover your services online.</h2>
           <p>
             Local SEO work focuses on accurate business information,
             relevant website content and the foundations that help search
             engines understand your services and service area.
           </p>
-          <p>
-            Search placement depends on many factors and is not guaranteed.
-          </p>
+
           <a class="button button-secondary" href="/pricing#seo">
             View local SEO pricing
           </a>
@@ -363,15 +437,13 @@
       <div class="container split">
         <div>
           <span class="eyebrow">04 / Ongoing support</span>
-          <h2>Keep routine website tasks from being overlooked.</h2>
+          <h2>Keep your website maintained after launch.</h2>
           <p>
             Monthly Care is for agreed routine support after the website
             is live. The included tasks and access requirements are
             confirmed in writing.
           </p>
-          <p class="price-line">
-            <strong>₹1,499/month</strong>
-          </p>
+          <p class="muted">See the current Monthly Care price and included scope on the pricing page.</p>
           <a class="button button-primary" href="/pricing#care">
             View Monthly Care
           </a>
@@ -379,36 +451,74 @@
 
         <div class="hero-art">
           <div class="hero-shape" aria-hidden="true"></div>
-          <div class="hero-panel">
+          <div class="hero-panel monthly-report-panel">
             <span class="panel-index">ILLUSTRATIVE MONTHLY REPORT</span>
             <h3>Routine checks, updates and reporting.</h3>
             <div class="panel-rule"></div>
-            <div class="panel-row">
+
+            <div class="panel-row monthly-report-row">
               <span>Uptime monitoring</span>
-              <span>Example</span>
+              <span>If configured</span>
             </div>
-            <div class="panel-row">
+
+            <div class="panel-row monthly-report-row">
               <span>Backup checks</span>
               <span>Where supported</span>
             </div>
-            <div class="panel-row">
+
+            <div class="panel-row monthly-report-row">
               <span>Basic maintenance and security checks</span>
-              <span>Example</span>
+              <span>As agreed</span>
             </div>
-            <div class="panel-row">
+
+            <div class="panel-row monthly-report-row">
               <span>Agreed routine updates</span>
-              <span>Example</span>
+              <span>As agreed</span>
             </div>
-            <div class="panel-row">
+
+            <div class="panel-row monthly-report-row">
               <span>Monthly report</span>
               <span>Included</span>
             </div>
+
             <p class="small muted">
               Illustrative example only, not a record of completed work.
-              Your report lists the tasks agreed in writing. Backup checks
-              depend on the hosting setup.
+              Your report records the checks and updates actually completed.
+              Uptime monitoring must be configured; backup checks depend on
+              the hosting setup.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="service-faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Services FAQ</span>
+          <h2>Questions about website and local SEO services.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is included in a business website?</summary>
+            <p>Page count, content, design, contact features and technical setup depend on the package and written project scope. The agreed deliverables are confirmed before work begins.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can you help with Google Business Profile?</summary>
+            <p>Profile setup or improvement can be discussed where the business is eligible and you can provide the required account access. Verification and Google’s decisions remain outside the developer’s control.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can you build a Telugu website?</summary>
+            <p>Yes. English, Telugu or bilingual page requirements can be scoped. Translation, proofreading and the number of pages should be agreed before work starts.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I choose the right service?</summary>
+            <p>Start with the pages and customer actions your business needs. Compare the packages on the pricing page or contact Eswar to discuss the scope.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -428,9 +538,11 @@
           <a class="button button-primary" href="/pricing">
             Compare all prices
           </a>
+
           <a class="button button-secondary" href="/work">
             View selected work
           </a>
+
           <a
             class="button button-whatsapp"
             data-whatsapp
@@ -444,76 +556,78 @@
     </section>
   </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand-column">
-        <a class="footer-brand" href="/" aria-label="Esvan Works home">
-          <img
-            class="footer-logo"
-            src="/assets/logo.jpeg"
-            width="190"
-            height="70"
-            alt="Esvan Works"
-            loading="lazy"
-            decoding="async"
-          >
-        </a>
-        <p>Websites &amp; Local SEO.</p>
-        <p>
-          Serving businesses in Guntur, Andhra Pradesh, and remotely across India.
-        </p>
-        <a
-          class="button button-whatsapp footer-audit"
-          data-whatsapp
-          data-message="Hi Eswar, I'd like a free website audit for my business."
-          href="https://wa.me/917995722627"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Free website audit</a>
-      </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-column">
+          <a class="footer-brand" href="/" aria-label="Esvan Works home">
+            <img
+              class="footer-logo"
+              src="/assets/logo.jpeg"
+              width="190"
+              height="70"
+              alt="Esvan Works"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
 
-      <div class="footer-navigation">
-        <div class="footer-column">
-          <h3>Explore</h3>
-          <nav class="footer-links" aria-label="Explore">
-            <a href="/">Home</a>
-            <a href="/services">Services</a>
-            <a href="/work">Work</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-          </nav>
+          <p>Websites &amp; Local SEO.</p>
+          <p>
+            Serving businesses in Guntur, Andhra Pradesh, and remotely across India.
+          </p>
+
+          <a
+            class="button button-whatsapp footer-audit"
+            data-whatsapp
+            data-message="Hi Eswar, I'd like a free website audit for my business."
+            href="https://wa.me/917995722627"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Free website audit</a>
         </div>
 
-        <div class="footer-column">
-          <h3>Solutions</h3>
-          <nav class="footer-links" aria-label="Solutions">
-            <a href="/website-for-clinics">Website for clinics</a>
-            <a href="/website-for-real-estate">Website for real estate</a>
-            <a href="/website-for-business">Website for business</a>
+        <div class="footer-navigation">
+          <div class="footer-column">
+            <h3>Explore</h3>
+            <nav class="footer-links" aria-label="Explore">
+              <a href="/">Home</a>
+              <a href="/services">Services</a>
+              <a href="/work">Work</a>
+              <a href="/pricing">Pricing</a>
+              <a href="/about">About</a>
+              <a href="/contact">Contact</a>
+            </nav>
+          </div>
+
+          <div class="footer-column">
+            <h3>Solutions</h3>
+            <nav class="footer-links" aria-label="Solutions">
+              <a href="/website-for-clinics">Website for clinics</a>
+              <a href="/website-for-real-estate">Website for real estate</a>
+              <a href="/website-for-business">Website for business</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Contact</h3>
+          <nav class="footer-links" aria-label="Contact and social links">
+            <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
+            <a href="tel:+917995722627">+91 79957 22627</a>
+            <a href="https://wa.me/917995722627" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://www.linkedin.com/in/eswar-maguluri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </nav>
+          <p class="footer-location">Guntur, Andhra Pradesh, India</p>
         </div>
       </div>
 
-      <div class="footer-column footer-contact">
-        <h3>Contact</h3>
-        <nav class="footer-links" aria-label="Contact and social links">
-          <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
-          <a href="tel:+917995722627">+91 79957 22627</a>
-          <a href="https://wa.me/917995722627" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="https://www.linkedin.com/in/eswar-maguluri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </nav>
-        <p class="footer-location">Guntur, Andhra Pradesh, India</p>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
+        <a href="/privacy">Privacy policy</a>
+        <a href="/terms">Terms of service</a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
-      <a href="/privacy">Privacy policy</a>
-      <a href="/terms">Terms of service</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>

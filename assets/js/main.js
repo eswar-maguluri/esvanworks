@@ -5,16 +5,20 @@
    ========================================= */
 
 const WHATSAPP_NUMBER = "917995722627";
-const CONTACT_EMAIL = "eswarmaguluri02@gmail.com";
+const CONTACT_EMAIL = "contact@esvanworks.com";
 
 const DEFAULT_AUDIT =
   "Hi Eswar, I found Esvan Works. I'd like a free website audit for my business.";
 
+/*
+ * Keep these prices aligned with pricing.html.
+ * Update both files whenever you change a package price.
+ */
 const PACKAGE_PRICES = {
-  starter: "₹6,999 one-time",
-  websiteSeo: "₹12,999 one-time",
-  care: "₹1,999 per month",
-  localSeo: "₹5,999 one-time"
+  starter: "₹5,999 one-time",
+  websiteSeo: "₹11,999 one-time",
+  care: "₹1,499 per month",
+  localSeo: "₹4,999 one-time"
 };
 
 /* =========================================
@@ -43,6 +47,7 @@ function setWhatsAppLink(link, message = DEFAULT_AUDIT) {
    ========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
+
   const isLocalPreview =
     window.location.hostname === "localhost" ||
     window.location.hostname === "127.0.0.1";
@@ -122,16 +127,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (languageToggle) {
     /*
      * A complete Telugu translation has not yet
-     * been added to the page. Do not pretend that
-     * changing the button translates the content.
+     * been added. Do not pretend that this button
+     * translates the page.
      */
+
     languageToggle.textContent = "తెలుగు soon";
     languageToggle.disabled = true;
+
     languageToggle.setAttribute("aria-pressed", "false");
+
     languageToggle.setAttribute(
       "aria-label",
       "Telugu translation is not available yet"
     );
+
     languageToggle.title =
       "The Telugu version of this website is being prepared.";
   }
@@ -147,10 +156,12 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   if (menuButton && nav) {
+
     const mobileBreakpoint = 900;
 
     function closeMenu(returnFocus = false) {
       nav.classList.remove("is-open");
+
       menuButton.setAttribute("aria-expanded", "false");
       menuButton.setAttribute("aria-label", "Open navigation menu");
 
@@ -161,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openMenu() {
       nav.classList.add("is-open");
+
       menuButton.setAttribute("aria-expanded", "true");
       menuButton.setAttribute("aria-label", "Close navigation menu");
     }
@@ -169,33 +181,42 @@ document.addEventListener("DOMContentLoaded", function () {
     menuButton.setAttribute("aria-label", "Open navigation menu");
 
     menuButton.addEventListener("click", function () {
+
       if (menuButton.getAttribute("aria-expanded") === "true") {
         closeMenu();
       } else {
         openMenu();
       }
+
     });
 
     nav.querySelectorAll("a").forEach(function (link) {
+
       link.addEventListener("click", function () {
         closeMenu();
       });
+
     });
 
     document.addEventListener("keydown", function (event) {
+
       if (
         event.key === "Escape" &&
         menuButton.getAttribute("aria-expanded") === "true"
       ) {
         closeMenu(true);
       }
+
     });
 
     window.addEventListener("resize", function () {
+
       if (window.innerWidth > mobileBreakpoint) {
         closeMenu();
       }
+
     });
+
   }
 
   /* -----------------------------------------
@@ -203,6 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
      ----------------------------------------- */
 
   function normalizePath(path) {
+
     const normalized = path.replace(/\/+$/, "") || "/";
 
     if (normalized === "/" || normalized === "/index.html") {
@@ -210,6 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     return normalized.replace(/\.html$/i, "") || "/";
+
   }
 
   const currentPath = normalizePath(window.location.pathname);
@@ -217,7 +240,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelectorAll(".nav-links a, .site-nav a")
     .forEach(function (link) {
+
       try {
+
         const linkPath = normalizePath(
           new URL(link.href, window.location.origin).pathname
         );
@@ -227,9 +252,11 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           link.removeAttribute("aria-current");
         }
+
       } catch (error) {
         // Ignore invalid or unsupported navigation URLs.
       }
+
     });
 
   /* -----------------------------------------
@@ -240,6 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const demoToggle = document.querySelector("[data-demo-toggle]");
 
   if (searchDemo && demoToggle) {
+
     const businessItem = searchDemo.querySelector(
       ".demo-your-business, [data-your-business]"
     );
@@ -251,6 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
     demoToggle.setAttribute("aria-pressed", "false");
 
     demoToggle.addEventListener("click", function () {
+
       const isPromoted =
         demoToggle.getAttribute("aria-pressed") === "true";
 
@@ -265,117 +294,144 @@ document.addEventListener("DOMContentLoaded", function () {
       demoToggle.textContent = isPromoted
         ? initialButtonText
         : promotedButtonText;
+
     });
+
   }
 
   /* -----------------------------------------
      Website health self-check
      ----------------------------------------- */
 
-  document.querySelectorAll("[data-health-check]").forEach(function (checker) {
-    const answers = Array.from(
-      checker.querySelectorAll("select[data-health-answer]")
-    );
+  document
+    .querySelectorAll("[data-health-check]")
+    .forEach(function (checker) {
 
-    if (!answers.length) return;
+      const answers = Array.from(
+        checker.querySelectorAll("select[data-health-answer]")
+      );
 
-    const output = checker.querySelector(
-      "[data-health-output], [data-health-score]"
-    );
+      if (!answers.length) return;
 
-    const note = checker.querySelector("[data-health-note]");
-    const result = checker.querySelector("[data-health-result]");
-    const action = checker.querySelector("[data-health-whatsapp]");
+      const output = checker.querySelector(
+        "[data-health-output], [data-health-score]"
+      );
 
-    function updateHealthCheck() {
-      const completed = answers.filter(function (select) {
-        return select.value === "yes" || select.value === "no";
-      }).length;
+      const note = checker.querySelector("[data-health-note]");
+      const result = checker.querySelector("[data-health-result]");
+      const action = checker.querySelector("[data-health-whatsapp]");
 
-      if (completed < answers.length) {
+      function updateHealthCheck() {
+
+        const completed = answers.filter(function (select) {
+          return select.value === "yes" || select.value === "no";
+        }).length;
+
+        if (completed < answers.length) {
+
+          if (output) {
+            output.textContent =
+              "Answer all " +
+              answers.length +
+              " questions to see your result.";
+          }
+
+          if (note) {
+            note.textContent =
+              "Choose Yes or No for each item. This is a self-check, " +
+              "not an automated website, Google Maps, or technical audit.";
+          }
+
+          if (result) {
+            result.hidden = true;
+          }
+
+          return;
+        }
+
+        const yesCount = answers.filter(function (select) {
+          return select.value === "yes";
+        }).length;
+
         if (output) {
           output.textContent =
-            "Answer all " +
+            "You have " +
+            yesCount +
+            " of " +
             answers.length +
-            " questions to see your result.";
+            " checks covered.";
         }
 
         if (note) {
-          note.textContent =
-            "Choose Yes or No for each item. This is a self-check, " +
-            "not an automated website, Google Maps, or technical audit.";
+
+          if (yesCount <= 2) {
+
+            note.textContent =
+              "Several basics may need attention. Start with contact details, " +
+              "mobile usability, and accurate business information.";
+
+          } else if (yesCount <= 4) {
+
+            note.textContent =
+              "Some basics are in place. Review the remaining gaps to make " +
+              "your business easier to find and contact.";
+
+          } else {
+
+            note.textContent =
+              "Most of these basics are covered. A closer review may still " +
+              "identify opportunities for improvement.";
+
+          }
+
         }
 
-        if (result) result.hidden = true;
+        const details = answers.map(function (select, index) {
 
-        return;
-      }
+          const label =
+            select.dataset.question ||
+            (
+              select.labels && select.labels[0]
+                ? select.labels[0].textContent.trim()
+                : "Check " + (index + 1)
+            );
 
-      const yesCount = answers.filter(function (select) {
-        return select.value === "yes";
-      }).length;
+          return (
+            label +
+            ": " +
+            (select.value === "yes" ? "Yes" : "No")
+          );
 
-      if (output) {
-        output.textContent =
-          "You have " +
-          yesCount +
-          " of " +
-          answers.length +
-          " checks covered.";
-      }
+        });
 
-      if (note) {
-        if (yesCount <= 2) {
-          note.textContent =
-            "Several basics may need attention. Start with contact details, " +
-            "mobile usability, and accurate business information.";
-        } else if (yesCount <= 4) {
-          note.textContent =
-            "Some basics are in place. Review the remaining gaps to make " +
-            "your business easier to find and contact.";
-        } else {
-          note.textContent =
-            "Most of these basics are covered. A closer review may still " +
-            "identify opportunities for improvement.";
+        if (action) {
+
+          setWhatsAppLink(
+            action,
+            [
+              "Hi Eswar, I'd like a free website audit.",
+              "",
+              "Website health self-check: " +
+                yesCount +
+                "/" +
+                answers.length,
+              ...details
+            ].join("\n")
+          );
+
         }
+
+        if (result) {
+          result.hidden = false;
+        }
+
       }
 
-      const details = answers.map(function (select, index) {
-        const label =
-          select.dataset.question ||
-          (select.labels && select.labels[0]
-            ? select.labels[0].textContent.trim()
-            : "Check " + (index + 1));
-
-        return (
-          label +
-          ": " +
-          (select.value === "yes" ? "Yes" : "No")
-        );
+      answers.forEach(function (select) {
+        select.addEventListener("change", updateHealthCheck);
       });
 
-      if (action) {
-        setWhatsAppLink(
-          action,
-          [
-            "Hi Eswar, I'd like a free website audit.",
-            "",
-            "Website health self-check: " +
-              yesCount +
-              "/" +
-              answers.length,
-            ...details
-          ].join("\n")
-        );
-      }
-
-      if (result) result.hidden = false;
-    }
-
-    answers.forEach(function (select) {
-      select.addEventListener("change", updateHealthCheck);
     });
-  });
 
   /* -----------------------------------------
      Package finder
@@ -384,14 +440,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const finder = document.querySelector("[data-package-finder]");
 
   if (finder) {
+
     const websiteSelect = finder.querySelector("#finder-website");
     const mapsSelect = finder.querySelector("#finder-maps");
     const careSelect = finder.querySelector("#finder-care");
+
     const result = finder.querySelector("[data-finder-result]");
     const action = finder.querySelector("[data-finder-cta]");
 
     function updatePackageFinder() {
-      if (!websiteSelect || !mapsSelect || !careSelect || !result) {
+
+      if (
+        !websiteSelect ||
+        !mapsSelect ||
+        !careSelect ||
+        !result
+      ) {
         return;
       }
 
@@ -399,7 +463,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const maps = mapsSelect.value;
       const care = careSelect.value;
 
+      /*
+       * Wait until all three questions are answered.
+       */
+
       if (!website || !maps || !care) {
+
         result.replaceChildren();
 
         const heading = document.createElement("h3");
@@ -422,37 +491,73 @@ document.addEventListener("DOMContentLoaded", function () {
       let packagePrice;
       let explanation;
 
+      /*
+       * Correct recommendation logic:
+       *
+       * website = yes means the customer needs a new website.
+       * website = no means the customer already has a website.
+       *
+       * maps = yes means local SEO setup is required.
+       */
+
       if (website === "yes" && maps === "yes") {
-        packageName = "Local SEO setup";
-        packagePrice = PACKAGE_PRICES.localSeo;
-        explanation =
-          "You already have a website and business listing. " +
-          "The Local SEO setup may help improve your local search foundations.";
-      } else if (website === "no" && maps === "yes") {
-        packageName = "Starter Website";
-        packagePrice = PACKAGE_PRICES.starter;
-        explanation =
-          "A professional website can give customers a clear place " +
-          "to learn about your services and contact you.";
-      } else if (website === "no" && maps === "no") {
+
         packageName = "Website + Local SEO";
         packagePrice = PACKAGE_PRICES.websiteSeo;
+
         explanation =
-          "This package combines a website with local SEO setup " +
-          "to build your online presence.";
+          "You need a new website and local SEO setup. " +
+          "This package combines both services.";
+
+      } else if (website === "yes" && maps === "no") {
+
+        packageName = "Starter Website";
+        packagePrice = PACKAGE_PRICES.starter;
+
+        explanation =
+          "A mobile-friendly website with clear service information " +
+          "and contact options is a practical starting point.";
+
+      } else if (website === "no" && maps === "yes") {
+
+        packageName = "Local SEO setup";
+        packagePrice = PACKAGE_PRICES.localSeo;
+
+        explanation =
+          "You already have a website and want help with local search. " +
+          "The existing website and Google Business Profile will need " +
+          "to be reviewed before the work is confirmed.";
+
       } else {
+
         packageName = "Website review";
         packagePrice = "Custom recommendation";
+
         explanation =
-          "Your current setup may benefit from a review before " +
-          "choosing a service.";
+          "You already have a website and do not currently need local SEO. " +
+          "Let's review your existing website before deciding what work " +
+          "is necessary.";
+
       }
 
+      /*
+       * Monthly Care is a separate ongoing service.
+       * It is not automatically included in the project price.
+       */
+
       if (care === "yes") {
+
         explanation +=
           " Monthly Care is also worth considering for ongoing updates " +
-          "and maintenance (" + PACKAGE_PRICES.care + ").";
+          "and maintenance at " +
+          PACKAGE_PRICES.care +
+          ".";
+
       }
+
+      /*
+       * Build the result safely using textContent.
+       */
 
       result.replaceChildren();
 
@@ -468,28 +573,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
       result.append(heading, price, paragraph);
 
+      /*
+       * Prepare a WhatsApp enquiry with the visitor's answers.
+       */
+
       if (action) {
+
         setWhatsAppLink(
           action,
           [
             "Hi Eswar, please recommend a package for my business.",
+            "",
             "Recommended option: " + packageName,
             "Indicative price: " + packagePrice,
-            "Website already exists: " + website,
-            "Google Business Profile exists: " + maps,
-            "Need ongoing care: " + care
+            "I need a new website: " + website,
+            "I need Google Maps / local SEO help: " + maps,
+            "I need monthly website care: " + care
           ].join("\n")
         );
+
       }
+
     }
 
     [websiteSelect, mapsSelect, careSelect].forEach(function (select) {
+
       if (select) {
         select.addEventListener("change", updatePackageFinder);
       }
+
     });
 
     updatePackageFinder();
+
   }
 
   /* -----------------------------------------
@@ -499,23 +615,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const enquiryForm = document.querySelector("[data-enquiry-form]");
 
   if (enquiryForm) {
+
     const status = enquiryForm.querySelector("[data-form-status]");
+
     const submitButton = enquiryForm.querySelector(
       'button[type="submit"]'
     );
 
     enquiryForm.addEventListener("submit", function (event) {
+
       event.preventDefault();
 
       /*
        * Honeypot anti-spam check.
-       * Real visitors should leave this field empty.
        */
+
       const honeypot = enquiryForm.querySelector(
         'input[name="website"]'
       );
 
       if (honeypot && honeypot.value.trim() !== "") {
+
         if (status) {
           status.textContent = "Unable to process this enquiry.";
         }
@@ -524,38 +644,50 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       /*
-       * The form has novalidate in HTML, so call
-       * reportValidity() explicitly.
+       * Form validation.
        */
+
       if (!enquiryForm.reportValidity()) {
         return;
       }
 
       const name = enquiryForm.elements.name.value.trim();
       const phone = enquiryForm.elements.phone.value.trim();
+
       const businessType =
         enquiryForm.elements.businessType.value.trim();
+
       const message = enquiryForm.elements.message.value.trim();
 
       if (name.length < 2) {
+
         if (status) {
           status.textContent =
             "Please enter your name using at least 2 characters.";
         }
 
         enquiryForm.elements.name.focus();
+
         return;
       }
 
       if (message.length < 10) {
+
         if (status) {
           status.textContent =
             "Please provide a little more detail about your requirements.";
         }
 
         enquiryForm.elements.message.focus();
+
         return;
       }
+
+      /*
+       * Prepare email.
+       * This opens the visitor's email application.
+       * It does not submit information to a server.
+       */
 
       const subject = "Website enquiry from " + name;
 
@@ -583,35 +715,45 @@ document.addEventListener("DOMContentLoaded", function () {
         encodeURIComponent(body);
 
       if (status) {
+
         status.textContent =
-          "Opening your email app. Please review the prepared message and send it from your email account.";
+          "Opening your email app. Please review the prepared message " +
+          "and send it from your email account.";
+
       }
 
       if (submitButton) {
         submitButton.textContent = "Open email app";
       }
 
-      /*
-       * This opens the visitor's email application.
-       * It does not send the form to a server.
-       */
       window.location.href = mailtoUrl;
+
     });
+
   }
 
   /* -----------------------------------------
      External links safety
      ----------------------------------------- */
-  document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
-    const relValues = new Set(
-      (link.getAttribute("rel") || "")
-        .split(/\s+/)
-        .filter(Boolean)
-    );
 
-    relValues.add("noopener");
-    relValues.add("noreferrer");
+  document
+    .querySelectorAll('a[target="_blank"]')
+    .forEach(function (link) {
 
-    link.setAttribute("rel", Array.from(relValues).join(" "));
-  });
+      const relValues = new Set(
+        (link.getAttribute("rel") || "")
+          .split(/\s+/)
+          .filter(Boolean)
+      );
+
+      relValues.add("noopener");
+      relValues.add("noreferrer");
+
+      link.setAttribute(
+        "rel",
+        Array.from(relValues).join(" ")
+      );
+
+    });
+
 });

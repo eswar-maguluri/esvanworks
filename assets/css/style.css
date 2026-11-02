@@ -3814,3 +3814,293 @@ button:active {
     animation: none !important;
   }
 }
+
+
+
+/* =========================================
+   Verified PageSpeed performance snapshot
+   ========================================= */
+
+.performance-section {
+  overflow: clip;
+}
+
+.performance-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.performance-heading > div {
+  min-width: 0;
+}
+
+.performance-heading h2 {
+  max-width: 19ch;
+  margin-bottom: .85rem;
+}
+
+.performance-heading p {
+  max-width: 66ch;
+  margin-bottom: 0;
+}
+
+.performance-heading > a {
+  flex: 0 0 auto;
+  margin-bottom: .25rem;
+}
+
+.performance-score-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .85rem;
+  margin-bottom: 1.25rem;
+}
+
+.performance-score {
+  display: flex;
+  min-width: 0;
+  min-height: 145px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  padding: 1rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  text-align: center;
+}
+
+.performance-score-value {
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  border: 3px solid #00c875;
+  border-radius: 50%;
+  color: #00c875;
+  background: #00c87512;
+  font: 700 1.45rem/1 Archivo, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.performance-score-label {
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.performance-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.performance-device {
+  min-width: 0;
+  padding: clamp(1.1rem, 2.5vw, 1.6rem);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.performance-device-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+  padding-bottom: .9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.performance-device-heading h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.performance-device-heading strong {
+  color: #00c875;
+  font: 700 1.15rem Archivo, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.performance-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1rem;
+  margin: 0;
+}
+
+.performance-metrics > div {
+  min-width: 0;
+  padding: .85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.performance-metrics dt {
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+.performance-metrics dd {
+  margin: .2rem 0 0;
+  color: var(--text);
+  font: 600 1.25rem Archivo, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.performance-disclaimer {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .performance-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .85rem;
+  }
+
+  .performance-score-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .65rem;
+  }
+
+  .performance-score {
+    min-height: 125px;
+  }
+
+  .performance-score:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .performance-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .performance-metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .performance-score {
+    padding: .85rem .55rem;
+  }
+
+  .performance-score-label {
+    font-size: .84rem;
+  }
+}
+
+/* =========================================
+   Compact PageSpeed section refinement
+   ========================================= */
+
+.performance-section {
+  padding-block: clamp(2.75rem, 5vw, 4.5rem);
+}
+
+.performance-heading {
+  align-items: center;
+  margin-bottom: 1.35rem;
+  gap: 1.5rem;
+}
+
+.performance-heading h2 {
+  max-width: 24ch;
+  margin-bottom: .55rem;
+  font-size: clamp(1.85rem, 3.4vw, 2.8rem);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+
+.performance-heading p {
+  max-width: 62ch;
+  font-size: .98rem;
+  line-height: 1.55;
+}
+
+.performance-score-grid {
+  gap: .7rem;
+  margin-bottom: 1rem;
+}
+
+.performance-score {
+  min-height: 112px;
+  gap: .55rem;
+  padding: .8rem .6rem;
+  border-radius: 10px;
+}
+
+.performance-score-value {
+  width: 54px;
+  height: 54px;
+  border-width: 2px;
+  font-size: 1.2rem;
+}
+
+.performance-score-label {
+  font-size: .82rem;
+}
+
+.performance-details {
+  gap: 1rem;
+}
+
+.performance-device {
+  padding: 1.1rem 1.25rem;
+}
+
+.performance-device-heading {
+  padding-bottom: .65rem;
+}
+
+.performance-metrics > div {
+  padding: .65rem 0;
+}
+
+.performance-metrics dt {
+  font-size: .84rem;
+}
+
+.performance-metrics dd {
+  font-size: 1.1rem;
+}
+
+.performance-disclaimer {
+  margin-top: .75rem;
+  font-size: .82rem;
+}
+
+@media (max-width: 760px) {
+  .performance-section {
+    padding-block: 2.5rem;
+  }
+
+  .performance-heading {
+    gap: .75rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .performance-heading h2 {
+    max-width: 20ch;
+    font-size: clamp(1.8rem, 7vw, 2.35rem);
+  }
+
+  .performance-score {
+    min-height: 108px;
+  }
+
+  .performance-device {
+    padding: 1rem;
+  }
+}

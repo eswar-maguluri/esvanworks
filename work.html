@@ -15,10 +15,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Noto+Sans+Telugu:wght@400;700&amp;display=swap"
-  >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Noto+Sans+Telugu:wght@400;700&amp;display=swap">
 
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/main.js" defer></script>
@@ -57,6 +54,102 @@
     ]
   }
   </script>
+
+  <style>
+    /* Portfolio presentation improvements */
+    .work-frame {
+      overflow: hidden;
+      border-radius: 14px;
+      background: #10141b;
+    }
+
+    .work-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .work-content {
+      min-width: 0;
+    }
+
+    .work-content h4 {
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    .work-content p {
+      overflow-wrap: anywhere;
+    }
+
+    .work-project-section .work-card {
+      align-items: center;
+    }
+
+    .project-detail-label {
+      color: var(--accent, #70e1e8);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-result-note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(112, 225, 232, 0.22);
+      border-radius: 12px;
+      background: rgba(112, 225, 232, 0.05);
+    }
+
+    .project-result-note p {
+      margin: 0;
+    }
+
+    .testimonial-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial {
+      min-width: 0;
+      height: 100%;
+    }
+
+    .testimonial blockquote {
+      margin: 0 0 18px;
+    }
+
+    .testimonial cite {
+      display: block;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .testimonial-slider-controls {
+      display: none;
+    }
+
+    @media (max-width: 700px) {
+      .testimonial-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .work-frame img {
+        aspect-ratio: 4 / 3;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .work-frame img {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -70,12 +163,8 @@
           width="40"
           height="40"
           alt=""
-          onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+          decoding="async"
         >
-        <span class="brand-fallback" hidden>
-          <span>ESVAN</span>
-          <span>WORKS</span>
-        </span>
         <span>Esvan Works</span>
       </a>
 
@@ -94,6 +183,7 @@
         <a href="/pricing">Pricing</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
+
         <a
           class="button button-primary nav-audit"
           data-whatsapp
@@ -113,11 +203,14 @@
       <span aria-current="page">Work</span>
     </nav>
 
+    <!-- Portfolio hero -->
     <section class="hero work-hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Selected projects</span>
+
           <h1>Websites built around the business.</h1>
+
           <p>
             Each project has a different audience and purpose. The goal is to
             make the information clear and the next action easy for visitors.
@@ -141,14 +234,19 @@
 
         <div class="hero-art">
           <div class="hero-shape" aria-hidden="true"></div>
+
           <div class="hero-panel">
             <span class="panel-index">PROJECT INDEX / 001–002</span>
+
             <h2>Different businesses. Different requirements.</h2>
+
             <div class="panel-rule"></div>
+
             <div class="panel-row">
               <span>Acquire360</span>
               <span>001</span>
             </div>
+
             <div class="panel-row">
               <span>SR Cleaning Solutions</span>
               <span>002</span>
@@ -158,12 +256,14 @@
       </div>
     </section>
 
-    <!-- Project 001: primary case study -->
+    <!-- Project 001 -->
     <section class="section section--surface work-project-section" id="acquire360">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">01 / Multi-service brand</span>
+
           <h2>Acquire360</h2>
+
           <p>
             A website for a brand working across interior design,
             real estate assistance and digital marketing.
@@ -190,23 +290,31 @@
 
             <h3>Built to explain several services clearly.</h3>
 
-            <h4>The business</h4>
+            <span class="project-detail-label">The business</span>
             <p>
               Acquire360 works across interior design, real estate assistance
               and digital marketing. Its website needs to help visitors
               understand the different service areas.
             </p>
 
-            <h4>What I built</h4>
+            <span class="project-detail-label">The website approach</span>
             <p>
-              A business website that brings the brand's service areas together
-              and helps visitors understand the offer before making an enquiry.
+              A business website that brings the brand's service areas
+              together and helps visitors understand the offer before
+              making an enquiry.
             </p>
 
-            <h4>Tech used</h4>
+            <span class="project-detail-label">Technology</span>
             <p>HTML, CSS and JavaScript.</p>
 
             <p><strong>Website by Eswar Maguluri, Esvan Works.</strong></p>
+
+            <div class="project-result-note">
+              <p class="small muted">
+                No unverified traffic, ranking or lead figures are presented
+                for this project.
+              </p>
+            </div>
 
             <div class="button-row">
               <a
@@ -230,7 +338,9 @@
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">02 / Local service business</span>
+
           <h2>SR Cleaning Solutions</h2>
+
           <p>
             A phone-first website for a cleaning service business
             serving customers in Guntur.
@@ -258,23 +368,30 @@
 
             <h3>Make it easy to ask about the service.</h3>
 
-            <h4>The business</h4>
+            <span class="project-detail-label">The business</span>
             <p>
               SR Cleaning Solutions serves customers in Guntur and needs to
               present its cleaning services and contact options clearly.
             </p>
 
-            <h4>What I built</h4>
+            <span class="project-detail-label">The website approach</span>
             <p>
               A website that presents service information and contact options,
               including WhatsApp, click-to-call and email. English and Telugu
               options help the business communicate with local customers.
             </p>
 
-            <h4>Tech used</h4>
+            <span class="project-detail-label">Technology</span>
             <p>HTML, CSS and JavaScript.</p>
 
             <p><strong>Website by Eswar Maguluri, Esvan Works.</strong></p>
+
+            <div class="project-result-note">
+              <p class="small muted">
+                No unverified traffic, ranking or lead figures are presented
+                for this project.
+              </p>
+            </div>
 
             <div class="button-row">
               <a
@@ -293,12 +410,51 @@
       </div>
     </section>
 
-    <!-- Client feedback: both quotes remain available without JavaScript -->
+    <!--
+      FUTURE PROJECT SLOTS — keep unpublished until real projects are ready.
+
+      Project 003:
+      [CLIENT NAME]
+      [BUSINESS TYPE]
+      [CLIENT REQUIREMENT]
+      [WHAT WAS BUILT]
+      [TECHNOLOGY]
+      [VERIFIED LIVE WEBSITE URL]
+      [REAL SCREENSHOT PATH]
+
+      Project 004:
+      [CLIENT NAME]
+      [BUSINESS TYPE]
+      [CLIENT REQUIREMENT]
+      [WHAT WAS BUILT]
+      [TECHNOLOGY]
+      [VERIFIED LIVE WEBSITE URL]
+      [REAL SCREENSHOT PATH]
+
+      Project 005:
+      [CLIENT NAME]
+      [BUSINESS TYPE]
+      [CLIENT REQUIREMENT]
+      [WHAT WAS BUILT]
+      [TECHNOLOGY]
+      [VERIFIED LIVE WEBSITE URL]
+      [REAL SCREENSHOT PATH]
+
+      Optional performance badge:
+      [ADD REAL PAGESPEED MOBILE SCORE]
+      [ADD REAL PAGESPEED DESKTOP SCORE]
+      [ADD TEST DATE AND TESTED URL]
+      Publish only after running and verifying the tests.
+    -->
+
+    <!-- Client feedback -->
     <section class="section section--surface" id="feedback">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">Client feedback</span>
+
           <h2>Feedback from the people I worked with.</h2>
+
           <p>
             Client comments about their website projects. These are presented
             as testimonials, without added star ratings or review counts.
@@ -316,8 +472,12 @@
               efforts and would recommend him to anyone looking for a reliable
               website developer.”
             </blockquote>
+
             <cite>Sai Pavan, Acquire360</cite>
-            <p class="small muted">Website by Eswar Maguluri, Esvan Works.</p>
+
+            <p class="small muted">
+              Website by Eswar Maguluri, Esvan Works.
+            </p>
           </article>
 
           <article class="testimonial" data-testimonial>
@@ -332,8 +492,12 @@
               proactive communication made the entire process smooth. Any
               client would be lucky to have him build their website!”
             </blockquote>
+
             <cite>Sk Reshma, SR Cleaning Solutions, Guntur</cite>
-            <p class="small muted">Website by Eswar Maguluri, Esvan Works.</p>
+
+            <p class="small muted">
+              Website by Eswar Maguluri, Esvan Works.
+            </p>
           </article>
         </div>
 
@@ -363,15 +527,19 @@
       </div>
     </section>
 
+    <!-- Project process -->
     <section class="section">
       <div class="container narrow">
         <span class="eyebrow">Project scope</span>
+
         <h2>What happens before a project starts?</h2>
+
         <p>
           We agree on the pages, features, content, timeline and price in
           writing. You provide or approve business information and images.
           Revision rounds and any limits are confirmed in the written scope.
         </p>
+
         <p>
           Every project is different. I don't publish unverified traffic
           numbers, ranking claims or lead counts as results.
@@ -379,10 +547,13 @@
       </div>
     </section>
 
+    <!-- Final CTA -->
     <section class="final-cta">
       <div class="container">
         <span class="eyebrow">Your project could be next</span>
+
         <h2>Tell me what your website needs to do.</h2>
+
         <p>
           Start with a free audit and a direct conversation about your business.
         </p>
@@ -405,76 +576,83 @@
     </section>
   </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand-column">
-        <a class="footer-brand" href="/" aria-label="Esvan Works home">
-          <img
-            class="footer-logo"
-            src="/assets/logo.jpeg"
-            width="190"
-            height="70"
-            alt="Esvan Works"
-            loading="lazy"
-            decoding="async"
-          >
-        </a>
-        <p>Websites &amp; Local SEO.</p>
-        <p>
-          Serving businesses in Guntur, Andhra Pradesh, and remotely across India.
-        </p>
-        <a
-          class="button button-whatsapp footer-audit"
-          data-whatsapp
-          data-message="Hi Eswar, I'd like a free website audit for my business."
-          href="https://wa.me/917995722627"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Free website audit</a>
-      </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-column">
+          <a class="footer-brand" href="/" aria-label="Esvan Works home">
+            <img
+              class="footer-logo"
+              src="/assets/logo.jpeg"
+              width="190"
+              height="70"
+              alt="Esvan Works"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
 
-      <div class="footer-navigation">
-        <div class="footer-column">
-          <h3>Explore</h3>
-          <nav class="footer-links" aria-label="Explore">
-            <a href="/">Home</a>
-            <a href="/services">Services</a>
-            <a href="/work">Work</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-          </nav>
+          <p>Websites &amp; Local SEO.</p>
+
+          <p>
+            Serving businesses in Guntur, Andhra Pradesh, and remotely across India.
+          </p>
+
+          <a
+            class="button button-whatsapp footer-audit"
+            data-whatsapp
+            data-message="Hi Eswar, I'd like a free website audit for my business."
+            href="https://wa.me/917995722627"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Free website audit</a>
         </div>
 
-        <div class="footer-column">
-          <h3>Solutions</h3>
-          <nav class="footer-links" aria-label="Solutions">
-            <a href="/website-for-clinics">Website for clinics</a>
-            <a href="/website-for-real-estate">Website for real estate</a>
-            <a href="/website-for-business">Website for business</a>
+        <div class="footer-navigation">
+          <div class="footer-column">
+            <h3>Explore</h3>
+
+            <nav class="footer-links" aria-label="Explore">
+              <a href="/">Home</a>
+              <a href="/services">Services</a>
+              <a href="/work">Work</a>
+              <a href="/pricing">Pricing</a>
+              <a href="/about">About</a>
+              <a href="/contact">Contact</a>
+            </nav>
+          </div>
+
+          <div class="footer-column">
+            <h3>Solutions</h3>
+
+            <nav class="footer-links" aria-label="Solutions">
+              <a href="/website-for-clinics">Website for clinics</a>
+              <a href="/website-for-real-estate">Website for real estate</a>
+              <a href="/website-for-business">Website for business</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Contact</h3>
+
+          <nav class="footer-links" aria-label="Contact and social links">
+            <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
+            <a href="tel:+917995722627">+91 79957 22627</a>
+            <a href="https://wa.me/917995722627" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://www.linkedin.com/in/eswar-maguluri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </nav>
+
+          <p class="footer-location">Guntur, Andhra Pradesh, India</p>
         </div>
       </div>
 
-      <div class="footer-column footer-contact">
-        <h3>Contact</h3>
-        <nav class="footer-links" aria-label="Contact and social links">
-          <a href="mailto:contact@esvanworks.com">contact@esvanworks.com</a>
-          <a href="tel:+917995722627">+91 79957 22627</a>
-          <a href="https://wa.me/917995722627" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="https://www.linkedin.com/in/eswar-maguluri/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </nav>
-        <p class="footer-location">Guntur, Andhra Pradesh, India</p>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
+        <a href="/privacy">Privacy policy</a>
+        <a href="/terms">Terms of service</a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Esvan Works. All rights reserved.</span>
-      <a href="/privacy">Privacy policy</a>
-      <a href="/terms">Terms of service</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>

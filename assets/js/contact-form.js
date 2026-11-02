@@ -1,4 +1,3 @@
-
 (function () {
   "use strict";
 
@@ -12,9 +11,14 @@
     if (!form) return;
 
     const status = form.querySelector("[data-form-status]");
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    let isSubmitting = false;
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+
+      if (isSubmitting) return;
 
       if (!form.reportValidity()) return;
 
@@ -22,7 +26,9 @@
       const honeypot = form.elements.namedItem("website_url");
 
       if (honeypot && honeypot.value.trim() !== "") {
-        if (status) status.textContent = "Thank you.";
+        if (status) {
+          status.textContent = "Thank you.";
+        }
         return;
       }
 
@@ -34,18 +40,30 @@
       const service = String(formData.get("type") || "").trim();
       const details = String(formData.get("message") || "").trim();
 
+      // Additional checks before preparing the message.
+      if (!name || !business || !service || details.length < 10) {
+        if (status) {
+          status.textContent =
+            "Please complete all required fields before continuing.";
+        }
+        return;
+      }
+
       const messageLines = [
         "Hi Eswar, I'd like to discuss a project with Esvan Works.",
         "",
-        "Name: " + name,
-        "Business: " + business,
-        "Service needed: " + service,
-        "Project details: " + details
+        "Name: " + name
       ];
 
       if (phone) {
-        messageLines.splice(3, 0, "Phone: " + phone);
+        messageLines.push("Phone: " + phone);
       }
+
+      messageLines.push(
+        "Business: " + business,
+        "Service needed: " + service,
+        "Project details: " + details
+      );
 
       const whatsappUrl =
         "https://wa.me/" +
@@ -53,21 +71,44 @@
         "?text=" +
         encodeURIComponent(messageLines.join("\n"));
 
+      isSubmitting = true;
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.setAttribute("aria-busy", "true");
+      }
+
+      if (status) {
+        status.textContent =
+          "Opening WhatsApp. You can review your message before sending.";
+      }
+
+      // Open WhatsApp directly from the form submission interaction.
       const whatsappWindow = window.open(
         whatsappUrl,
-        "_blank"
+        "_blank",
+        "noopener,noreferrer"
       );
 
       if (whatsappWindow) {
-        whatsappWindow.opener = null;
-
         if (status) {
           status.textContent =
             "WhatsApp opened. Review your message and press Send.";
         }
       } else {
+        // Fallback for browsers that block new windows.
         window.location.assign(whatsappUrl);
       }
+
+      // Allow another attempt if the visitor returns to this page.
+      window.setTimeout(function () {
+        isSubmitting = false;
+
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute("aria-busy");
+        }
+      }, 2500);
     });
   });
 })();
