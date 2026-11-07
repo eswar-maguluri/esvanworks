@@ -52,7 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.hostname === "localhost" ||
     window.location.hostname === "127.0.0.1";
 
+  const internalDomains = new Set([
+    "esvanworks.com",
+    "www.esvanworks.com"
+  ]);
+
   const localPageRoutes = new Set([
+    "/",
     "/services",
     "/work",
     "/pricing",
@@ -62,7 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
     "/terms",
     "/website-for-clinics",
     "/website-for-real-estate",
-    "/website-for-business"
+    "/website-for-business",
+    "/website-for-coaching-institutes",
+    "/website-for-salons-and-gyms",
+    "/website-for-restaurants"
   ]);
 
   /* -----------------------------------------
@@ -77,7 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (
       !rawHref ||
       rawHref.startsWith("#") ||
-      /^(mailto:|tel:|javascript:|https?:|\/\/)/i.test(rawHref)
+      /^(mailto:|tel:|javascript:|data:|blob:)/i.test(rawHref) ||
+      rawHref.startsWith("//")
     ) {
       return;
     }
@@ -90,18 +100,34 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    if (url.origin !== window.location.origin) return;
-
-    const path = url.pathname.replace(/\/+$/, "") || "/";
-
-    if (localPageRoutes.has(path)) {
-      url.pathname = path + ".html";
-
-      link.setAttribute(
-        "href",
-        url.pathname + url.search + url.hash
+    const isInternalDomain =
+      url.origin === window.location.origin ||
+      (
+        url.protocol === "https:" &&
+        internalDomains.has(url.hostname)
       );
-    }
+
+    if (!isInternalDomain) return;
+
+    let path = url.pathname.replace(/\/+$/, "") || "/";
+
+    /*
+     * Support links that already contain .html.
+     */
+    path = path.replace(/\.html$/i, "") || "/";
+
+    if (!localPageRoutes.has(path)) return;
+
+    /*
+     * The homepage uses index.html locally.
+     * Other known routes use their matching .html files.
+     */
+    url.pathname = path === "/" ? "/index.html" : path + ".html";
+
+    link.setAttribute(
+      "href",
+      url.pathname + url.search + url.hash
+    );
   }
 
   if (isLocalPreview) {
